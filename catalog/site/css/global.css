@@ -164,3 +164,90 @@ h1 {
 .toc ol li {
   margin-block: var(--catalog-spacing-m);
 }
+
+/* KakaoBank Global Dynamic Theme Switcher */
+.kb-floating-switcher {
+  position: fixed;
+  top: 14px;
+  right: 120px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--md-sys-color-surface-container-high, #f1f3f5);
+  border: 1px solid var(--md-sys-color-outline-variant, #e5e8eb);
+  padding: 4px 6px;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-family: inherit;
+}
+
+.kb-switcher-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--md-sys-color-on-surface-variant, #4e5968);
+  margin-left: 6px;
+  margin-right: 4px;
+  letter-spacing: 0.04em;
+}
+
+.kb-theme-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--md-sys-color-on-surface-variant, #4e5968);
+  padding: 5px 10px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.kb-theme-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--md-sys-color-on-surface, #191f28);
+}
+
+.kb-theme-btn.active {
+  background: var(--md-sys-color-surface, #ffffff);
+  color: var(--md-sys-color-on-surface, #191f28);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.kb-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.dot-white {
+  background: #ffe100;
+}
+
+.dot-slate {
+  background: #38bdf8;
+}
+
+.dot-dark {
+  background: #121212;
+  border-color: #555555;
+}
+
+@media screen and (max-width: 900px) {
+  .kb-floating-switcher {
+    top: auto;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+

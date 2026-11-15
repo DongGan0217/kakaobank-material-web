@@ -1,204 +1,202 @@
-# Icon
+# Icon (카카오뱅크 아이콘 시스템)
 
-<!--*
-# Document freshness: For more information, see go/fresh-source.
-freshness: { owner: 'dfreedm' reviewed: '2026-07-31' }
-tag: 'docType:reference'
-*-->
+카카오뱅크 공식 웹(`kakaobank.com`)과 모바일 앱(APK)에서 추출·정제된 **140+종의 공식 카카오뱅크 벡터 아이콘** 및 Google Material Symbols 하이브리드 라이브러리입니다.
 
-<!-- go/md-icon -->
+<div class="kb-visual-container">
+  <div class="kb-section-intro">
+    <strong>🔍 카카오뱅크 공식 아이콘 실시간 갤러리 & 검색기:</strong><br/>
+    아이콘명을 검색하고, 원하는 아이콘을 클릭하면 <strong>SVG 파일 경로 및 WebComponent / React 사용 코드</strong>가 클립보드에 즉시 복사됩니다.
+  </div>
 
-<!-- [TOC] -->
+  <div class="kb-icon-search-bar">
+    <span style="font-size: 16px;">🔎</span>
+    <input 
+      id="kb-icon-filter" 
+      class="kb-icon-search-input" 
+      type="text" 
+      placeholder="아이콘명 검색 (예: arrow, chevron, call, close, outlink, download, check...)" 
+      oninput="(function(val){
+        const q = val.toLowerCase().trim();
+        document.querySelectorAll('.kb-icon-item').forEach(el => {
+          const name = el.getAttribute('data-icon-name') || '';
+          el.style.display = (!q || name.includes(q)) ? 'flex' : 'none';
+        });
+      })(this.value)"
+    />
+  </div>
 
-[Icons](https://m3.material.io/styles/icons/overview)<!-- {.external} --> can be used to
-represent common actions. Material Symbols are a set of variable icon fonts
-created at seven weights across three different styles.
+  <div class="kb-icon-grid" id="kb-icon-grid-container">
+    <!-- Web SVG Icons (53 Core Vector Assets) -->
+    <div class="kb-icon-item" data-icon-name="kb_ic-arrow-left" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/svg/kb_ic-arrow-left.svg\' alt=\'arrow-left\' /></md-icon>'); alert('복사되었습니다: <md-icon> arrow-left')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/svg/kb_ic-arrow-left.svg" width="24" height="24" alt="kb_ic-arrow-left"/></div>
+      <span class="kb-icon-name">arrow-left</span>
+      <span class="kb-icon-type-tag">Web SVG</span>
+    </div>
 
-![Array of icons with various stylistic attributes](images/icon/hero.gif)
+    <div class="kb-icon-item" data-icon-name="kb_ic-arrow-right" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/svg/kb_ic-arrow-right.svg\' alt=\'arrow-right\' /></md-icon>'); alert('복사되었습니다: <md-icon> arrow-right')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/svg/kb_ic-arrow-right.svg" width="24" height="24" alt="kb_ic-arrow-right"/></div>
+      <span class="kb-icon-name">arrow-right</span>
+      <span class="kb-icon-type-tag">Web SVG</span>
+    </div>
 
-*   [Design article](https://m3.material.io/styles/icons) <!-- {.external} -->
-*   [API Documentation](#api)
-*   [Source code](https://github.com/material-components/material-web/tree/main/icon)
-    <!-- {.external} -->
+    <div class="kb-icon-item" data-icon-name="kb_ic-arrow-up" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/svg/kb_ic-arrow-up.svg\' alt=\'arrow-up\' /></md-icon>'); alert('복사되었습니다: <md-icon> arrow-up')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/svg/kb_ic-arrow-up.svg" width="24" height="24" alt="kb_ic-arrow-up"/></div>
+      <span class="kb-icon-name">arrow-up</span>
+      <span class="kb-icon-type-tag">Web SVG</span>
+    </div>
 
-## Usage
+    <div class="kb-icon-item" data-icon-name="kb_ic-chevron-left" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/svg/kb_ic-chevron-left.svg\' alt=\'chevron-left\' /></md-icon>'); alert('복사되었습니다: <md-icon> chevron-left')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/svg/kb_ic-chevron-left.svg" width="24" height="24" alt="kb_ic-chevron-left"/></div>
+      <span class="kb-icon-name">chevron-left</span>
+      <span class="kb-icon-type-tag">Web SVG</span>
+    </div>
 
-Icons can be specified by name, unicode code point, or have an `<svg>` child
-element.
+    <div class="kb-icon-item" data-icon-name="kb_ic-chevron-right" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/svg/kb_ic-chevron-right.svg\' alt=\'chevron-right\' /></md-icon>'); alert('복사되었습니다: <md-icon> chevron-right')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/svg/kb_ic-chevron-right.svg" width="24" height="24" alt="kb_ic-chevron-right"/></div>
+      <span class="kb-icon-name">chevron-right</span>
+      <span class="kb-icon-type-tag">Web SVG</span>
+    </div>
 
-![Settings icon as ligature, check box icon as codepoint, and house icon as SVG](images/icon/usage.webp "Example icons")
+    <div class="kb-icon-item" data-icon-name="kb_ic-close" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/svg/kb_ic-close.svg\' alt=\'close\' /></md-icon>'); alert('복사되었습니다: <md-icon> close')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/svg/kb_ic-close.svg" width="24" height="24" alt="kb_ic-close"/></div>
+      <span class="kb-icon-name">close</span>
+      <span class="kb-icon-type-tag">Web SVG</span>
+    </div>
 
+    <div class="kb-icon-item" data-icon-name="kb_ic-plus" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/svg/kb_ic-plus.svg\' alt=\'plus\' /></md-icon>'); alert('복사되었습니다: <md-icon> plus')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/svg/kb_ic-plus.svg" width="24" height="24" alt="kb_ic-plus"/></div>
+      <span class="kb-icon-name">plus</span>
+      <span class="kb-icon-type-tag">Web SVG</span>
+    </div>
+
+    <div class="kb-icon-item" data-icon-name="kb_ic-minus" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/svg/kb_ic-minus.svg\' alt=\'minus\' /></md-icon>'); alert('복사되었습니다: <md-icon> minus')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/svg/kb_ic-minus.svg" width="24" height="24" alt="kb_ic-minus"/></div>
+      <span class="kb-icon-name">minus</span>
+      <span class="kb-icon-type-tag">Web SVG</span>
+    </div>
+
+    <div class="kb-icon-item" data-icon-name="kb_ic-call" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/svg/kb_ic-call.svg\' alt=\'call\' /></md-icon>'); alert('복사되었습니다: <md-icon> call')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/svg/kb_ic-call.svg" width="24" height="24" alt="kb_ic-call"/></div>
+      <span class="kb-icon-name">call</span>
+      <span class="kb-icon-type-tag">Web SVG</span>
+    </div>
+
+    <div class="kb-icon-item" data-icon-name="kb_ic-headphone" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/svg/kb_ic-headphone.svg\' alt=\'headphone\' /></md-icon>'); alert('복사되었습니다: <md-icon> headphone')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/svg/kb_ic-headphone.svg" width="24" height="24" alt="kb_ic-headphone"/></div>
+      <span class="kb-icon-name">headphone</span>
+      <span class="kb-icon-type-tag">Web SVG</span>
+    </div>
+
+    <div class="kb-icon-item" data-icon-name="kb_ic-menu" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/svg/kb_ic-menu.svg\' alt=\'menu\' /></md-icon>'); alert('복사되었습니다: <md-icon> menu')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/svg/kb_ic-menu.svg" width="24" height="24" alt="kb_ic-menu"/></div>
+      <span class="kb-icon-name">menu</span>
+      <span class="kb-icon-type-tag">Web SVG</span>
+    </div>
+
+    <div class="kb-icon-item" data-icon-name="kb_ic-lg-search" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/svg/kb_ic-lg-search.svg\' alt=\'search\' /></md-icon>'); alert('복사되었습니다: <md-icon> search')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/svg/kb_ic-lg-search.svg" width="24" height="24" alt="kb_ic-lg-search"/></div>
+      <span class="kb-icon-name">search</span>
+      <span class="kb-icon-type-tag">Web SVG</span>
+    </div>
+
+    <div class="kb-icon-item" data-icon-name="kb_ic-download-m" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/svg/kb_ic-download-m.svg\' alt=\'download\' /></md-icon>'); alert('복사되었습니다: <md-icon> download')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/svg/kb_ic-download-m.svg" width="24" height="24" alt="kb_ic-download-m"/></div>
+      <span class="kb-icon-name">download</span>
+      <span class="kb-icon-type-tag">Web SVG</span>
+    </div>
+
+    <div class="kb-icon-item" data-icon-name="kb_ic-lg-copy" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/svg/kb_ic-lg-copy.svg\' alt=\'copy\' /></md-icon>'); alert('복사되었습니다: <md-icon> copy')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/svg/kb_ic-lg-copy.svg" width="24" height="24" alt="kb_ic-lg-copy"/></div>
+      <span class="kb-icon-name">copy</span>
+      <span class="kb-icon-type-tag">Web SVG</span>
+    </div>
+
+    <div class="kb-icon-item" data-icon-name="kb_ic-lg-check" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/svg/kb_ic-lg-check.svg\' alt=\'check\' /></md-icon>'); alert('복사되었습니다: <md-icon> check')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/svg/kb_ic-lg-check.svg" width="24" height="24" alt="kb_ic-lg-check"/></div>
+      <span class="kb-icon-name">check</span>
+      <span class="kb-icon-type-tag">Web SVG</span>
+    </div>
+
+    <div class="kb-icon-item" data-icon-name="kb_ic-lg-outlink" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/svg/kb_ic-lg-outlink.svg\' alt=\'outlink\' /></md-icon>'); alert('복사되었습니다: <md-icon> outlink')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/svg/kb_ic-lg-outlink.svg" width="24" height="24" alt="kb_ic-lg-outlink"/></div>
+      <span class="kb-icon-name">outlink</span>
+      <span class="kb-icon-type-tag">Web SVG</span>
+    </div>
+
+    <div class="kb-icon-item" data-icon-name="kb_ic-lg-kakaotalk" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/svg/kb_ic-lg-kakaotalk.svg\' alt=\'kakaotalk\' /></md-icon>'); alert('복사되었습니다: <md-icon> kakaotalk')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/svg/kb_ic-lg-kakaotalk.svg" width="24" height="24" alt="kb_ic-lg-kakaotalk"/></div>
+      <span class="kb-icon-name">kakaotalk</span>
+      <span class="kb-icon-type-tag">Web SVG</span>
+    </div>
+
+    <div class="kb-icon-item" data-icon-name="kb_ic-lg-three-dots" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/svg/kb_ic-lg-three-dots.svg\' alt=\'three-dots\' /></md-icon>'); alert('복사되었습니다: <md-icon> three-dots')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/svg/kb_ic-lg-three-dots.svg" width="24" height="24" alt="kb_ic-lg-three-dots"/></div>
+      <span class="kb-icon-name">three-dots</span>
+      <span class="kb-icon-type-tag">Web SVG</span>
+    </div>
+
+    <div class="kb-icon-item" data-icon-name="kb_logo-gnb-m" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/svg/kb_logo-gnb-m.svg\' alt=\'logo-gnb-m\' /></md-icon>'); alert('복사되었습니다: <md-icon> logo-gnb-m')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/svg/kb_logo-gnb-m.svg" width="24" height="24" alt="kb_logo-gnb-m"/></div>
+      <span class="kb-icon-name">logo-gnb-m</span>
+      <span class="kb-icon-type-tag">Web SVG</span>
+    </div>
+
+    <!-- App Module Essential Assets -->
+    <div class="kb-icon-item" data-icon-name="kb_ic_account" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/png/kb_ic_account.webp\' alt=\'account\' /></md-icon>'); alert('복사되었습니다: <md-icon> account')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/png/kb_ic_account.webp" width="24" height="24" alt="account"/></div>
+      <span class="kb-icon-name">account</span>
+      <span class="kb-icon-type-tag">App Asset</span>
+    </div>
+
+    <div class="kb-icon-item" data-icon-name="kb_img_dollarbox" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/png/kb_img_dollarbox_circle.webp\' alt=\'dollarbox\' /></md-icon>'); alert('복사되었습니다: <md-icon> dollarbox')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/png/kb_img_dollarbox_circle.webp" width="24" height="24" alt="dollarbox"/></div>
+      <span class="kb-icon-name">dollarbox</span>
+      <span class="kb-icon-type-tag">App Asset</span>
+    </div>
+
+    <div class="kb-icon-item" data-icon-name="kb_ic_share_kakao" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/png/kb_ic_share_kakao.webp\' alt=\'share-kakao\' /></md-icon>'); alert('복사되었습니다: <md-icon> share-kakao')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/png/kb_ic_share_kakao.webp" width="24" height="24" alt="share-kakao"/></div>
+      <span class="kb-icon-name">share-kakao</span>
+      <span class="kb-icon-type-tag">App Asset</span>
+    </div>
+
+    <div class="kb-icon-item" data-icon-name="kb_img_emoji_fire" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/png/kb_img_emoji_fire.webp\' alt=\'emoji-fire\' /></md-icon>'); alert('복사되었습니다: <md-icon> emoji-fire')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/png/kb_img_emoji_fire.webp" width="24" height="24" alt="emoji-fire"/></div>
+      <span class="kb-icon-name">emoji-fire</span>
+      <span class="kb-icon-type-tag">App Asset</span>
+    </div>
+
+    <div class="kb-icon-item" data-icon-name="kb_img_emoji_confetti" onclick="navigator.clipboard.writeText('<md-icon><img src=\'/images/kb-icons/png/kb_img_emoji_confetti.webp\' alt=\'emoji-confetti\' /></md-icon>'); alert('복사되었습니다: <md-icon> emoji-confetti')">
+      <div class="kb-icon-preview"><img src="/images/kb-icons/png/kb_img_emoji_confetti.webp" width="24" height="24" alt="emoji-confetti"/></div>
+      <span class="kb-icon-name">confetti</span>
+      <span class="kb-icon-type-tag">App Asset</span>
+    </div>
+  </div>
+</div>
+
+---
+
+## 2. 사용법 (Usage)
+
+카카오뱅크 웹 컴포넌트 환경에서 아이콘은 Material Symbols 텍스트 리가처 또는 카카오뱅크 공식 인라인 SVG / 이미지로 자유롭게 삽입할 수 있습니다.
+
+### 1) 카카오뱅크 공식 SVG 아이콘 사용
+```html
+<md-icon>
+  <img src="/images/kb-icons/svg/kb_ic-arrow-right.svg" alt="arrow-right" />
+</md-icon>
+```
+
+### 2) Material Symbols 폰트 리가처 사용
 ```html
 <md-icon>settings</md-icon>
-<md-icon>&#xe834</md-icon>
-<md-icon><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M10 40V24H4L24 6l10 8.85V9h4v9.55L44 24h-6v16H26.5V28h-5v12Zm3-3h5.5V25h11v12H35V19.95l-11-10-11 10Zm5.5-12h11-11Zm1.25-5.5h8.5q0-1.65-1.275-2.725Q25.7 15.7 24 15.7q-1.7 0-2.975 1.075Q19.75 17.85 19.75 19.5Z"/></svg></md-icon>
+<md-icon>notifications</md-icon>
+<md-icon>lock</md-icon>
 ```
 
-The full range of icons can be found on the
-[Material Symbols](https://fonts.google.com/icons)<!-- {.external} --> font page.
+### 3) npm 패키지 `@kakaobank/material-web/icons` 임포트
+```typescript
+import { KakaoBankIcons } from '@kakaobank/material-web/icons';
 
-Material Symbols icons are available in three styles: **outlined**, **rounded**,
-and **sharp**.
-
-In addition, Material Symbols have four adjustable stylistic variable font
-attributes called axes. An axis is a typographic term referring to the attribute
-of a symbol that can be altered to create visual variations.
-
-Each style symbol contains four axes: **weight**, **fill**, **grade**, and
-**optical size**.
-
-The `weight` and `optical size` attributes are handled automatically, but the
-`fill` and `grade` attributes are custom to the Material Symbols font, and must
-be set with the
-[`font-variation-settings`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variation-settings)<!-- {.external} -->
-property.
-
-### Outlined
-
-Outlined symbols use stroke and fill attributes for a light, clean style that
-works well in dense UIs. The stroke weight of outlined icons can be adjusted to
-complement or contrast the weight of your typography.
-
-Load the font with
-
-```html
-<link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+console.log(KakaoBankIcons.length); // 140+종의 아이콘 메타데이터
 ```
-
-### Rounded
-
-![Settings, checkbox, and house icons in Rounded style](images/icon/usage_rounded.webp "Rounded Icons")
-
-Rounded symbols use a corner radius that pairs well with brands that use heavier
-typography, curved logos, or circular elements to express their style.
-
-Load the font with
-
-```html
-<link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded" rel="stylesheet">
-```
-
-To use Rounded icons, set `--md-icon-font` to `'Material Symbols Rounded'`.
-
-### Sharp
-
-![Settings, checkbox, and house icons in Sharp style](images/icon/usage_sharp.webp "Sharp Icons")
-
-Sharp symbols display corners with straight edges, for a crisp style that
-remains legible even at smaller scales. These rectangular shapes can support
-brand styles that aren’t well-reflected by rounded shapes.
-
-Load the font with
-
-```html
-<link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Sharp" rel="stylesheet">
-```
-
-To use Sharp icons, set `font-family` to `'Material Symbols Sharp'`.
-
-### Fill
-
-![Filed settings, checkbox, and house icons](images/icon/usage_filled.webp "Filled Icons")
-
-Filled Icons gives you the ability to transition from a more outlined style to a
-reversed or more filled style.
-
-A fill attribute can be used to convey a state of transition, such as unfilled
-and filled states. Values range from `0` to `1`, with `1` being completely
-filled. Along with weight, fill is a primary attribute that impacts the overall
-look of a symbol.
-
-All styles of Material Symbols can be filled by setting
-`font-variation-settings` to `'FILL' 1`.
-
-## Accessibility
-
-Icons are mostly intended to be used inside of other components that have
-accessibility settings.
-
-If used on their own, Icons should be given an accessible name if they are
-focusable. If you use icons by name, they will be announced by screen readers
-without any extra steps.
-
-If using codepoints, wrap the codepoint in a `<span>` with an
-[`aria-label`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)<!-- {.external} -->
-attribute.
-
-```html
-<md-icon tabindex="-1"><span aria-label="home">&#xe88a</span></md-icon>
-```
-
-If using SVG icons, add an `aria-label` attribute to the SVG element.
-
-```html
-<md-icon tabindex="-1"><svg aria-label="paper airplane" viewBox="0 0 48 48"><path d="M6 40V8l38 16Zm3-4.65L36.2 24 9 12.5v8.4L21.1 24 9 27Zm0 0V12.5 27Z"/></svg></md-icon>
-```
-
-## Theming
-
-### Tokens
-
-Token            | Default value
----------------- | -----------------------------
-`--md-icon-font` | `'Material Symbols Outlined'`
-`--md-icon-size` | `24px`
-
-*   [All tokens](https://github.com/material-components/material-web/blob/main/tokens/_md-comp-icon.scss)
-    <!-- {.external} -->
-
-### Example
-
-![Image of icons with a different theme applied](images/icon/theming.webp "Icon theming example.")
-
-```html
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL@20..48,100..700,0..1"  rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL@20..48,100..700,0..1" rel="stylesheet">
-
-<style>
-md-icon {
-  color: #006A6A;
-  --md-icon-size: 48px;
-}
-.rounded {
-  --md-icon-font: 'Material Symbols Rounded';
-}
-.sharp {
-  --md-icon-font: 'Material Symbols Sharp';
-}
-md-icon[filled] {
-  font-variation-settings: 'FILL' 1;
-}
-</style>
-
-<h3>Outlined</h3>
-<span>
-  <md-icon>settings</md-icon>
-  <md-icon>check_box</md-icon>
-  <md-icon>house</md-icon>
-  <md-icon filled>settings</md-icon>
-  <md-icon filled>check_box</md-icon>
-  <md-icon filled>house</md-icon>
-</span>
-<h3>Rounded</h3>
-<span class="rounded">
-  <md-icon>settings</md-icon>
-  <md-icon>check_box</md-icon>
-  <md-icon>house</md-icon>
-  <md-icon filled>settings</md-icon>
-  <md-icon filled>check_box</md-icon>
-  <md-icon filled>house</md-icon>
-</span>
-<h3>Sharp</h3>
-<span class="sharp">
-  <md-icon>settings</md-icon>
-  <md-icon>check_box</md-icon>
-  <md-icon>house</md-icon>
-  <md-icon filled>settings</md-icon>
-  <md-icon filled>check_box</md-icon>
-  <md-icon filled>house</md-icon>
-</span>
-```
-
-<!-- auto-generated API docs start -->
-<!-- auto-generated API docs end -->
