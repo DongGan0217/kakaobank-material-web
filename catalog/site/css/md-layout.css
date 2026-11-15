@@ -714,6 +714,12 @@ blockquote.warning a {
   margin-block: 20px;
 }
 
+.kb-overview-grid > p {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .kb-overview-card {
   background: var(--md-sys-color-surface, #ffffff);
   border: 1px solid var(--md-sys-color-outline-variant, #e5e8eb);

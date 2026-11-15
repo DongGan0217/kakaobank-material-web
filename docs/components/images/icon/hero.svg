@@ -1,0 +1,47 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 480' width='100%' height='100%'>
+  <defs>
+    <linearGradient id='bgGradient' x1='0%' y1='0%' x2='100%' y2='100%'>
+      <stop offset='0%' stop-color='#FFFDF0'/>
+      <stop offset='50%' stop-color='#F8F9FA'/>
+      <stop offset='100%' stop-color='#EDF0F3'/>
+    </linearGradient>
+    <filter id='cardShadow' x='-10%' y='-10%' width='120%' height='125%'>
+      <feDropShadow dx='0' dy='12' stdDeviation='16' flood-color='#191F28' flood-opacity='0.06'/>
+    </filter>
+  </defs>
+
+  <!-- Background Surface -->
+  <rect width='800' height='480' fill='url(#bgGradient)'/>
+
+  <!-- Decorative KakaoBank Accent Glow -->
+  <circle cx='680' cy='80' r='140' fill='#FFE100' opacity='0.18'/>
+  <circle cx='100' cy='400' r='120' fill='#FFE100' opacity='0.12'/>
+
+  <!-- Main Showcase Container Card -->
+  <rect x='100' y='40' width='600' height='400' rx='28' fill='#FFFFFF' stroke='#E5E8EB' stroke-width='1.5' filter='url(#cardShadow)'/>
+
+  <!-- KakaoBank Header Tag -->
+  <rect x='140' y='75' width='120' height='32' rx='8' fill='#FFE100'/>
+  <text x='200' y='96' fill='#191F28' font-family='Pretendard, sans-serif' font-size='13' font-weight='bold' text-anchor='middle'>kakaobank</text>
+
+  <!-- Title & Description -->
+  <text x='140' y='142' fill='#191F28' font-family='Pretendard, sans-serif' font-size='24' font-weight='800'>Icon (카카오뱅크 아이콘 시스템)</text>
+  <text x='140' y='168' fill='#76808E' font-family='Pretendard, sans-serif' font-size='14'>140+종 공식 추출 벡터 아이콘 라이브러리</text>
+
+  <!-- Component Interactive Graphic -->
+  
+            <rect x='180' y='210' width='60' height='60' rx='16' fill='#F8F9FA' stroke='#E5E8EB'/>
+            <circle cx='210' cy='240' r='12' fill='#FFE100'/>
+            <rect x='260' y='210' width='60' height='60' rx='16' fill='#F8F9FA' stroke='#E5E8EB'/>
+            <path d='M285 240 L295 240 M290 235 L295 240 L290 245' stroke='#191F28' stroke-width='2' fill='none'/>
+            <rect x='340' y='210' width='60' height='60' rx='16' fill='#F8F9FA' stroke='#E5E8EB'/>
+            <path d='M365 245 C365 235 375 235 375 245' stroke='#191F28' stroke-width='2' fill='none'/>
+            <rect x='420' y='210' width='60' height='60' rx='16' fill='#FFE100'/>
+            <path d='M445 235 L455 245 M455 235 L445 245' stroke='#191F28' stroke-width='2.5'/>
+            <rect x='500' y='210' width='60' height='60' rx='16' fill='#F8F9FA' stroke='#E5E8EB'/>
+            <path d='M525 245 L530 250 L540 238' stroke='#3182F6' stroke-width='2.5' fill='none'/>
+        
+
+  <!-- Footer Subtle Watermark -->
+  <text x='660' y='410' fill='#B0B8C1' font-family='Pretendard, sans-serif' font-size='12' font-weight='600' text-anchor='end'>KakaoBank Material Web M3</text>
+</svg>

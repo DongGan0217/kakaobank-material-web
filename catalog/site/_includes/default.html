@@ -146,6 +146,7 @@
             style="font-weight: 700; color: #191f28;"
           >★ Component Overview</md-list-item>
           {% for file in collections.component|filtersort('data.name') %}
+            {% if file.data.name != 'Overview' and file.url != '/components/overview/' %}
             <md-list-item
               href="{{ file.url }}"
               role="menuitem"
@@ -153,6 +154,7 @@
               type="link"
               tabindex="{% if file.url == page.url %}0{% else %}-1{% endif %}"
             >{{ file.data.name }}</md-list-item>
+            {% endif %}
           {% endfor %}
         </md-list>
       </nav-drawer>

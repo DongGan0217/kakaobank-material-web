@@ -1,8 +1,8 @@
-<!-- catalog-only-start --><!-- ---
+---
 name: Overview
 title: Component Overview
 order: 1
------><!-- catalog-only-end -->
+---
 
 # 카카오뱅크 컴포넌트 전체 개요 (Component Overview)
 
@@ -12,7 +12,6 @@ order: 1
   <div class="kb-section-intro">
     <strong>💡 한눈에 보는 컴포넌트 쇼케이스:</strong> 각 카드의 미니 컴포넌트를 직접 클릭하고 동작을 확인해보세요. 상세 속성 및 실시간 옵션 변경은 <strong>[상세 가이드 보기 →]</strong> 링크를 통해 이동할 수 있습니다.
   </div>
-
   <div class="kb-overview-grid">
     <!-- 1. Button -->
     <div class="kb-overview-card">
@@ -33,7 +32,6 @@ order: 1
         <a href="/components/button/" class="kb-overview-link">상세 가이드 & 샌드박스 →</a>
       </div>
     </div>
-
     <!-- 2. Checkbox -->
     <div class="kb-overview-card">
       <div class="kb-overview-preview">
@@ -53,7 +51,6 @@ order: 1
         <a href="/components/checkbox/" class="kb-overview-link">상세 가이드 & 샌드박스 →</a>
       </div>
     </div>
-
     <!-- 3. Switch -->
     <div class="kb-overview-card">
       <div class="kb-overview-preview">
@@ -75,7 +72,6 @@ order: 1
         <a href="/components/switch/" class="kb-overview-link">상세 가이드 & 샌드박스 →</a>
       </div>
     </div>
-
     <!-- 4. Text Field -->
     <div class="kb-overview-card">
       <div class="kb-overview-preview" style="width: 100%;">
@@ -95,16 +91,15 @@ order: 1
         <a href="/components/text-field/" class="kb-overview-link">상세 가이드 & 샌드박스 →</a>
       </div>
     </div>
-
     <!-- 5. Chip -->
     <div class="kb-overview-card">
       <div class="kb-overview-preview" style="gap: 8px;">
-        <span style="background: #FFE100; color: #191F28; padding: 6px 12px; border-radius: 9999px; font-size: 12px; font-weight: 700;">#입출금통장</span>
-        <span style="background: #F2F4F6; color: #4E5968; padding: 6px 12px; border-radius: 9999px; font-size: 12px; font-weight: 600;">#모임통장</span>
+        <span style="background: #FFE100; color: #191F28; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);">#정기예금</span>
+        <span style="background: #FFFFFF; color: #4E5968; font-size: 13px; font-weight: 500; padding: 6px 14px; border-radius: 20px; border: 1px solid #D1D6DB;">#비상금대출</span>
       </div>
       <div class="kb-overview-info">
         <span class="kb-overview-title">Chip (칩)</span>
-        <p class="kb-overview-desc">카테고리 필터링, 추천 태그 및 금융 상품 선별</p>
+        <p class="kb-overview-desc">금융 상품 키워드 필터링 및 옵션 다중 선택 태그</p>
         <div class="kb-overview-tags">
           <span class="kb-badge-sm">Assist</span>
           <span class="kb-badge-sm">Filter</span>
@@ -114,52 +109,53 @@ order: 1
         <a href="/components/chip/" class="kb-overview-link">상세 가이드 & 샌드박스 →</a>
       </div>
     </div>
-
     <!-- 6. Dialog -->
     <div class="kb-overview-card">
       <div class="kb-overview-preview">
-        <div style="background: #FFFFFF; border: 1px solid #E5E8EB; border-radius: 16px; padding: 14px 18px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); text-align: center; width: 85%;">
-          <strong style="font-size: 13px;">이체를 실행할까요?</strong>
-          <div style="font-size: 11px; color: #76808E; margin-top: 4px;">50,000원 → 홍길동</div>
+        <div style="background: #FFFFFF; border: 1px solid #E5E8EB; border-radius: 16px; padding: 12px 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); width: 85%;">
+          <div style="font-size: 13px; font-weight: 700; color: #191F28;">이체 확인</div>
+          <div style="font-size: 11px; color: #4E5968; margin: 4px 0 8px;">100,000원을 송금할까요?</div>
+          <div style="display: flex; justify-content: flex-end; gap: 6px;">
+            <span style="font-size: 10px; font-weight: 600; color: #4E5968; padding: 4px 8px;">취소</span>
+            <span style="font-size: 10px; font-weight: 700; background: #FFE100; color: #191F28; padding: 4px 8px; border-radius: 6px;">확인</span>
+          </div>
         </div>
       </div>
       <div class="kb-overview-info">
         <span class="kb-overview-title">Dialog (다이얼로그)</span>
-        <p class="kb-overview-desc">송금 확인 및 중요 의사결정을 묻는 모달 대화상자</p>
+        <p class="kb-overview-desc">송금 최종 확인, 본인 인증 및 중요 금융 알림 모달</p>
         <div class="kb-overview-tags">
-          <span class="kb-badge-sm">Confirmation</span>
           <span class="kb-badge-sm">Alert</span>
-          <span class="kb-badge-sm">24px Radius</span>
+          <span class="kb-badge-sm">Confirmation</span>
+          <span class="kb-badge-sm">24px Rounded</span>
         </div>
         <a href="/components/dialog/" class="kb-overview-link">상세 가이드 & 샌드박스 →</a>
       </div>
     </div>
-
     <!-- 7. Select -->
     <div class="kb-overview-card">
       <div class="kb-overview-preview" style="width: 100%;">
-        <div style="background: #FFFFFF; border: 1.5px solid #D1D6DB; border-radius: 12px; padding: 10px 14px; width: 85%; display: flex; justify-content: space-between; align-items: center;">
-          <span style="font-size: 13px; font-weight: 600;">카카오뱅크 입출금통장</span>
-          <span style="font-size: 11px;">▼</span>
+        <div style="background: #F9FAFB; border: 1.5px solid #D1D6DB; border-radius: 12px; padding: 10px 14px; width: 85%; display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 13px; font-weight: 600; color: #191F28;">카카오뱅크 자유적금</span>
+          <span style="font-size: 12px; color: #8B95A1;">▼</span>
         </div>
       </div>
       <div class="kb-overview-info">
         <span class="kb-overview-title">Select (셀렉트)</span>
-        <p class="kb-overview-desc">출금 계좌 선택, 은행 선택 드롭다운 메뉴</p>
+        <p class="kb-overview-desc">출금 계좌 및 금융 상품 선택 드롭다운</p>
         <div class="kb-overview-tags">
           <span class="kb-badge-sm">Filled</span>
           <span class="kb-badge-sm">Outlined</span>
-          <span class="kb-badge-sm">Account Picker</span>
+          <span class="kb-badge-sm">Product Picker</span>
         </div>
         <a href="/components/select/" class="kb-overview-link">상세 가이드 & 샌드박스 →</a>
       </div>
     </div>
-
     <!-- 8. Slider -->
     <div class="kb-overview-card">
       <div class="kb-overview-preview" style="width: 100%;">
         <div style="width: 85%;">
-          <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 700; margin-bottom: 4px;">
+          <div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; margin-bottom: 4px;">
             <span>대출 기간</span>
             <span style="color: #3182F6;">24개월</span>
           </div>
@@ -177,31 +173,72 @@ order: 1
         <a href="/components/slider/" class="kb-overview-link">상세 가이드 & 샌드박스 →</a>
       </div>
     </div>
-
-    <!-- 9. Icon & Icon Button -->
+    <!-- 9. FAB (Floating Action Button) -->
     <div class="kb-overview-card">
       <div class="kb-overview-preview" style="gap: 12px;">
-        <button style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid #E5E8EB; background: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-          <img src="/images/kb-icons/svg/kb_ic-call.svg" width="20" height="20" alt="call"/>
-        </button>
-        <button style="width: 40px; height: 40px; border-radius: 50%; border: none; background: #FFE100; display: flex; align-items: center; justify-content: center; cursor: pointer;">
-          <img src="/images/kb-icons/svg/kb_ic-chevron-right.svg" width="20" height="20" alt="chevron"/>
+        <button type="button" style="height: 48px; border-radius: 16px; border: none; background: #FFE100; color: #191F28; padding: 0 16px; font-weight: 700; font-size: 13px; display: flex; align-items: center; gap: 8px; box-shadow: 0 6px 16px rgba(0,0,0,0.12); cursor: pointer;">
+          <img src="/../images/kb-icons/svg/kb_ic-add.svg" width="18" height="18" alt="add" />
+          <span>계좌 개설</span>
         </button>
       </div>
       <div class="kb-overview-info">
-        <span class="kb-overview-title">Icon & Icon Button</span>
-        <p class="kb-overview-desc">카카오뱅크 140+종 공식 벡터 아이콘 및 원형 액션 버튼</p>
+        <span class="kb-overview-title">FAB (플로팅 버튼)</span>
+        <p class="kb-overview-desc">화면 상단/하단에 부유하는 핵심 진입 액션 버튼</p>
         <div class="kb-overview-tags">
-          <span class="kb-badge-sm">140+ Icons</span>
+          <span class="kb-badge-sm">Small</span>
           <span class="kb-badge-sm">Standard</span>
-          <span class="kb-badge-sm">Filled</span>
-          <span class="kb-badge-sm">Outlined</span>
+          <span class="kb-badge-sm">Extended</span>
+          <span class="kb-badge-sm">Yellow Accent</span>
         </div>
-        <a href="/components/icon/" class="kb-overview-link">상세 가이드 & 갤러리 →</a>
+        <a href="/components/fab/" class="kb-overview-link">상세 가이드 & 샌드박스 →</a>
       </div>
     </div>
-
-    <!-- 10. List -->
+    <!-- 10. Icon Button -->
+    <div class="kb-overview-card">
+      <div class="kb-overview-preview" style="gap: 12px;">
+        <button style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid #E5E8EB; background: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+          <img src="/../images/kb-icons/svg/kb_ic-call.svg" width="20" height="20" alt="call" />
+        </button>
+        <button style="width: 40px; height: 40px; border-radius: 50%; border: none; background: #FFE100; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+          <img src="/../images/kb-icons/svg/kb_ic-chevron-right.svg" width="20" height="20" alt="chevron" />
+        </button>
+      </div>
+      <div class="kb-overview-info">
+        <span class="kb-overview-title">Icon Button (아이콘 버튼)</span>
+        <p class="kb-overview-desc">단독 또는 상단 앱바에 사용되는 원형 인터랙티브 액션 버튼</p>
+        <div class="kb-overview-tags">
+          <span class="kb-badge-sm">Standard</span>
+          <span class="kb-badge-sm">Filled</span>
+          <span class="kb-badge-sm">Tonal</span>
+          <span class="kb-badge-sm">Outlined</span>
+        </div>
+        <a href="/components/icon-button/" class="kb-overview-link">상세 가이드 & 샌드박스 →</a>
+      </div>
+    </div>
+    <!-- 11. Radio -->
+    <div class="kb-overview-card">
+      <div class="kb-overview-preview" style="flex-direction: column; gap: 8px; align-items: flex-start; padding-left: 36px;">
+        <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">
+          <input type="radio" name="demo-radio" checked style="accent-color: #FFE100; cursor: pointer; width: 18px; height: 18px;" />
+          매월 지정일 이체
+        </label>
+        <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: #76808E; cursor: pointer;">
+          <input type="radio" name="demo-radio" style="accent-color: #FFE100; cursor: pointer; width: 18px; height: 18px;" />
+          매주 특정 요일 이체
+        </label>
+      </div>
+      <div class="kb-overview-info">
+        <span class="kb-overview-title">Radio (라디오 버튼)</span>
+        <p class="kb-overview-desc">복수 선택지 중 단일 옵션을 고르는 금융 주기/방식 선택기</p>
+        <div class="kb-overview-tags">
+          <span class="kb-badge-sm">Selected</span>
+          <span class="kb-badge-sm">Unselected</span>
+          <span class="kb-badge-sm">Yellow Accent</span>
+        </div>
+        <a href="/components/radio/" class="kb-overview-link">상세 가이드 & 샌드박스 →</a>
+      </div>
+    </div>
+    <!-- 12. List -->
     <div class="kb-overview-card">
       <div class="kb-overview-preview" style="width: 100%;">
         <div style="background: #FFFFFF; border: 1px solid #E5E8EB; border-radius: 12px; width: 85%; padding: 8px 12px;">
@@ -223,8 +260,7 @@ order: 1
         <a href="/components/list/" class="kb-overview-link">상세 가이드 & 샌드박스 →</a>
       </div>
     </div>
-
-    <!-- 11. Tabs -->
+    <!-- 13. Tabs -->
     <div class="kb-overview-card">
       <div class="kb-overview-preview" style="width: 100%;">
         <div style="display: flex; border-bottom: 2px solid #E5E8EB; width: 85%;">
@@ -243,8 +279,7 @@ order: 1
         <a href="/components/tabs/" class="kb-overview-link">상세 가이드 & 샌드박스 →</a>
       </div>
     </div>
-
-    <!-- 12. Progress Indicators -->
+    <!-- 14. Progress -->
     <div class="kb-overview-card">
       <div class="kb-overview-preview" style="width: 100%;">
         <div style="width: 85%;">
@@ -263,6 +298,79 @@ order: 1
           <span class="kb-badge-sm">Indeterminate</span>
         </div>
         <a href="/components/progress/" class="kb-overview-link">상세 가이드 & 샌드박스 →</a>
+      </div>
+    </div>
+    <!-- 15. Menu -->
+    <div class="kb-overview-card">
+      <div class="kb-overview-preview" style="width: 100%;">
+        <div style="background: #FFFFFF; border: 1px solid #E5E8EB; border-radius: 12px; width: 80%; padding: 6px 0; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+          <div style="padding: 6px 12px; font-size: 12px; font-weight: 700; color: #191F28; background: #F8F9FA;">이체 내역 다운로드</div>
+          <div style="padding: 6px 12px; font-size: 12px; color: #4E5968;">계좌 관리 설정</div>
+        </div>
+      </div>
+      <div class="kb-overview-info">
+        <span class="kb-overview-title">Menu (메뉴)</span>
+        <p class="kb-overview-desc">더보기 및 부가 금융 기능 팝업 드롭다운</p>
+        <div class="kb-overview-tags">
+          <span class="kb-badge-sm">Dropdown</span>
+          <span class="kb-badge-sm">Cascading</span>
+          <span class="kb-badge-sm">Contextual</span>
+        </div>
+        <a href="/components/menu/" class="kb-overview-link">상세 가이드 & 샌드박스 →</a>
+      </div>
+    </div>
+    <!-- 16. Divider -->
+    <div class="kb-overview-card">
+      <div class="kb-overview-preview" style="width: 100%; flex-direction: column; gap: 8px;">
+        <span style="font-size: 11px; color: #76808E;">Full Width Divider</span>
+        <div style="width: 85%; height: 1px; background: #E5E8EB;"></div>
+        <span style="font-size: 11px; color: #76808E;">Inset Divider</span>
+        <div style="width: 60%; height: 2px; background: #FFE100; border-radius: 2px;"></div>
+      </div>
+      <div class="kb-overview-info">
+        <span class="kb-overview-title">Divider (구분선)</span>
+        <p class="kb-overview-desc">콘텐츠 그룹 및 섹션을 명확히 분리하는 표준 디바이더</p>
+        <div class="kb-overview-tags">
+          <span class="kb-badge-sm">Full Width</span>
+          <span class="kb-badge-sm">Inset</span>
+          <span class="kb-badge-sm">Middle Inset</span>
+        </div>
+        <a href="/components/divider/" class="kb-overview-link">상세 가이드 & 샌드박스 →</a>
+      </div>
+    </div>
+    <!-- 17. Elevation -->
+    <div class="kb-overview-card">
+      <div class="kb-overview-preview" style="gap: 12px;">
+        <div style="width: 44px; height: 44px; background: #FFFFFF; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">L1</div>
+        <div style="width: 44px; height: 44px; background: #FFFFFF; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; border: 1.5px solid #FFE100;">L3</div>
+      </div>
+      <div class="kb-overview-info">
+        <span class="kb-overview-title">Elevation (입체감 & 그림자)</span>
+        <p class="kb-overview-desc">카카오뱅크 모던 카드의 0~5단계 깊이감 시스템</p>
+        <div class="kb-overview-tags">
+          <span class="kb-badge-sm">Level 0~5</span>
+          <span class="kb-badge-sm">Soft Shadow</span>
+          <span class="kb-badge-sm">Fintech Card</span>
+        </div>
+        <a href="/components/elevation/" class="kb-overview-link">상세 가이드 & 샌드박스 →</a>
+      </div>
+    </div>
+    <!-- 18. Focus Ring & Ripple -->
+    <div class="kb-overview-card">
+      <div class="kb-overview-preview" style="gap: 12px;">
+        <button style="height: 36px; padding: 0 12px; border-radius: 10px; border: none; background: #191F28; color: #FFFFFF; font-size: 12px; font-weight: 700; outline: 3px solid #FFE100; outline-offset: 2px; cursor: pointer;">
+          Focus Ring
+        </button>
+      </div>
+      <div class="kb-overview-info">
+        <span class="kb-overview-title">Focus Ring & Ripple</span>
+        <p class="kb-overview-desc">웹 접근성 키보드 포커스 링 및 터치 리플 피드백</p>
+        <div class="kb-overview-tags">
+          <span class="kb-badge-sm">A11y Focus</span>
+          <span class="kb-badge-sm">Touch Ripple</span>
+          <span class="kb-badge-sm">Yellow Ring</span>
+        </div>
+        <a href="/components/focus-ring/" class="kb-overview-link">상세 가이드 & 샌드박스 →</a>
       </div>
     </div>
   </div>

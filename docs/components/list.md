@@ -32,9 +32,87 @@ vertical indexes of text and images
 
 </catalog-component-header-title>
 
-<img class="hero" src="images/list/hero.webp" alt="CImage of a mobile phone screen with a Recipies page and a list recipies in a material list. The first item is Fresh baked breads with an image of someone holding bread on the left and a horizontal three dot menu on the right. Then Tacos with an image of tacos and the same three dot menu">
+<img class="hero" src="images/list/hero.svg" alt="CImage of a mobile phone screen with a Recipies page and a list recipies in a material list. The first item is Fresh baked breads with an image of someone holding bread on the left and a horizontal three dot menu on the right. Then Tacos with an image of tacos and the same three dot menu">
 
 </catalog-component-header>
+
+<!-- KakaoBank Interactive Options Playground & Live Sandbox -->
+<div class="kb-playground-container">
+  <div class="kb-playground-header">
+    <div class="kb-playground-title">
+      <span>🛠️ List (금융 거래 내역 리스트) 실시간 옵션 샌드박스</span>
+      <span class="kb-playground-badge">Live Interactive</span>
+    </div>
+    <span style="font-size: 12px; color: #4E5968;">카카오뱅크 계좌 및 결제 거래 내역 리스트 옵션을 조작해보세요.</span>
+  </div>
+  <div class="kb-playground-body">
+    <div class="kb-playground-controls">
+      <div class="kb-control-group">
+        <label class="kb-control-label" for="kb-list-lines">리스트 라인 수 (Lines):</label>
+        <select id="kb-list-lines" class="kb-control-select" onchange="updateListDemo()">
+          <option value="two" selected>Two-line (상호명 + 결제 시간/수단)</option>
+          <option value="one">Single-line (간편 한 줄형)</option>
+        </select>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px;">
+        <label class="kb-control-checkbox">
+          <input id="kb-list-avatar" type="checkbox" checked onchange="updateListDemo()" />
+          <span>선두 아이콘/아바타 표시 (Leading Icon)</span>
+        </label>
+        <label class="kb-control-checkbox">
+          <input id="kb-list-amount" type="checkbox" checked onchange="updateListDemo()" />
+          <span>후미 결제 금액 표시 (Trailing Amount)</span>
+        </label>
+      </div>
+    </div>
+    <div class="kb-playground-canvas" id="kb-list-canvas" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px;">
+      <div style="width: 100%; max-width: 440px; background: #FFFFFF; border: 1px solid #E5E8EB; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.04);">
+        <div style="display: flex; align-items: center; padding: 14px 18px; border-bottom: 1px solid #F2F4F6;">
+          <div id="kb-list-item-avatar-1" style="width: 40px; height: 40px; border-radius: 50%; background: #FFE100; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; color: #191F28; margin-right: 14px;">B</div>
+          <div style="flex: 1;">
+            <div style="font-size: 15px; font-weight: 700; color: #191F28;">스타벅스 강남점</div>
+            <div id="kb-list-sub-1" style="font-size: 12px; color: #8B95A1; margin-top: 2px;">체크카드 결제 • 11.15 12:30</div>
+          </div>
+          <div id="kb-list-item-amount-1" style="font-size: 15px; font-weight: 700; color: #F04452;">-5,400원</div>
+        </div>
+        <div style="display: flex; align-items: center; padding: 14px 18px;">
+          <div id="kb-list-item-avatar-2" style="width: 40px; height: 40px; border-radius: 50%; background: #E8F3FF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; color: #3182F6; margin-right: 14px;">↓</div>
+          <div style="flex: 1;">
+            <div style="font-size: 15px; font-weight: 700; color: #191F28;">월급 입금</div>
+            <div id="kb-list-sub-2" style="font-size: 12px; color: #8B95A1; margin-top: 2px;">타행 이체 입금 • 11.15 09:00</div>
+          </div>
+          <div id="kb-list-item-amount-2" style="font-size: 15px; font-weight: 700; color: #3182F6;">+3,500,000원</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="kb-playground-footer">
+    <pre class="kb-code-preview" id="kb-list-code">&lt;md-list&gt;
+  &lt;md-list-item headline="스타벅스 강남점" supporting-text="체크카드 결제 • 11.15 12:30"&gt;
+    &lt;div slot="start"&gt;B&lt;/div&gt;
+    &lt;div slot="end" style="color: #F04452;"&gt;-5,400원&lt;/div&gt;
+  &lt;/md-list-item&gt;
+&lt;/md-list&gt;</pre>
+    <button class="kb-copy-code-btn" type="button" onclick="navigator.clipboard.writeText(document.getElementById('kb-list-code').innerText); this.innerText='복사 완료!'; setTimeout(()=>this.innerText='코드 복사', 1500)">코드 복사</button>
+  </div>
+</div>
+<script>
+  function updateListDemo() {
+    const lines = document.getElementById('kb-list-lines').value;
+    const hasAvatar = document.getElementById('kb-list-avatar').checked;
+    const hasAmount = document.getElementById('kb-list-amount').checked;
+
+    document.getElementById('kb-list-item-avatar-1').style.display = hasAvatar ? 'flex' : 'none';
+    document.getElementById('kb-list-item-avatar-2').style.display = hasAvatar ? 'flex' : 'none';
+    document.getElementById('kb-list-sub-1').style.display = lines === 'two' ? 'block' : 'none';
+    document.getElementById('kb-list-sub-2').style.display = lines === 'two' ? 'block' : 'none';
+    document.getElementById('kb-list-item-amount-1').style.display = hasAmount ? 'block' : 'none';
+    document.getElementById('kb-list-item-amount-2').style.display = hasAmount ? 'block' : 'none';
+
+    const code = document.getElementById('kb-list-code');
+    code.innerText = `<md-list>\n  <md-list-item headline="스타벅스 강남점" ${lines === 'two' ? 'supporting-text="체크카드 결제 • 11.15 12:30"' : ''}>\n    ${hasAvatar ? '<div slot="start">B</div>' : ''}\n    ${hasAmount ? '<div slot="end" style="color: #F04452;">-5,400원</div>' : ''}\n  </md-list-item>\n</md-list>`;
+  }
+</script>
 
 *   [Design article](https://m3.material.io/components/lists) <!-- {.external} -->
 *   [API Documentation](#api)

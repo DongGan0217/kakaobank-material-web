@@ -16,7 +16,73 @@ Focus rings follow the same heuristics as
 [`:focus-visible`](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible)<!-- {.external} -->
 to determine when they are visible.
 
-![Three elements with a focus ring that moves between them.](images/focus/hero.gif "A focus ring moving across elements.")
+![Three elements with a focus ring that moves between them.](images/focus/hero.svg "A focus ring moving across elements.")
+
+<!-- KakaoBank Interactive Options Playground & Live Sandbox -->
+<div class="kb-playground-container">
+  <div class="kb-playground-header">
+    <div class="kb-playground-title">
+      <span>🛠️ Focus Ring (웹 접근성 포커스 링) 실시간 옵션 샌드박스</span>
+      <span class="kb-playground-badge">Live Interactive</span>
+    </div>
+    <span style="font-size: 12px; color: #4E5968;">키보드 내비게이션 시 표시되는 고대비 포커스 링 옵션을 실시간 조작해보세요.</span>
+  </div>
+  <div class="kb-playground-body">
+    <div class="kb-playground-controls">
+      <div class="kb-control-group">
+        <label class="kb-control-label" for="kb-ring-color">포커스 링 색상 (Color):</label>
+        <select id="kb-ring-color" class="kb-control-select" onchange="updateRingDemo()">
+          <option value="#FFE100" selected>카카오 옐로우 (#FFE100 / 고대비)</option>
+          <option value="#191F28">다크 차콜 (#191F28)</option>
+          <option value="#3182F6">포인트 블루 (#3182F6)</option>
+        </select>
+      </div>
+      <div class="kb-control-group">
+        <label class="kb-control-label" for="kb-ring-width">링 두께 (Width):</label>
+        <select id="kb-ring-width" class="kb-control-select" onchange="updateRingDemo()">
+          <option value="3" selected>3px (카카오뱅크 권장)</option>
+          <option value="2">2px (슬림)</option>
+          <option value="4">4px (초고대비)</option>
+        </select>
+      </div>
+      <div class="kb-control-group">
+        <label class="kb-control-label" for="kb-ring-offset">링 오프셋 간격 (Offset):</label>
+        <select id="kb-ring-offset" class="kb-control-select" onchange="updateRingDemo()">
+          <option value="2" selected>2px (표준 여백)</option>
+          <option value="0">0px (밀착)</option>
+          <option value="4">4px (넓은 여백)</option>
+        </select>
+      </div>
+    </div>
+    <div class="kb-playground-canvas" id="kb-ring-canvas" style="min-height: 180px; display: flex; justify-content: center; align-items: center; padding: 24px;">
+      <button id="kb-ring-render" type="button" style="height: 52px; padding: 0 24px; border-radius: 16px; border: none; background: #191F28; color: #FFFFFF; font-size: 16px; font-weight: 700; cursor: pointer; outline: 3px solid #FFE100; outline-offset: 2px; transition: all 0.2s ease;">
+        포커스 활성 버튼 (Tab Focus)
+      </button>
+    </div>
+  </div>
+  <div class="kb-playground-footer">
+    <pre class="kb-code-preview" id="kb-ring-code">&lt;button style="position: relative;"&gt;
+  &lt;md-focus-ring style="--md-focus-ring-color: #FFE100; --md-focus-ring-width: 3px; --md-focus-ring-offset: 2px;"&gt;&lt;/md-focus-ring&gt;
+  카카오뱅크 버튼
+&lt;/button&gt;</pre>
+    <button class="kb-copy-code-btn" type="button" onclick="navigator.clipboard.writeText(document.getElementById('kb-ring-code').innerText); this.innerText='복사 완료!'; setTimeout(()=>this.innerText='코드 복사', 1500)">코드 복사</button>
+  </div>
+</div>
+<script>
+  function updateRingDemo() {
+    const color = document.getElementById('kb-ring-color').value;
+    const width = document.getElementById('kb-ring-width').value;
+    const offset = document.getElementById('kb-ring-offset').value;
+
+    const btn = document.getElementById('kb-ring-render');
+    const code = document.getElementById('kb-ring-code');
+
+    btn.style.outline = `${width}px solid ${color}`;
+    btn.style.outlineOffset = `${offset}px`;
+
+    code.innerText = `<button style="position: relative;">\n  <md-focus-ring style="--md-focus-ring-color: ${color}; --md-focus-ring-width: ${width}px; --md-focus-ring-offset: ${offset}px;"></md-focus-ring>\n  카카오뱅크 버튼\n</button>`;
+  }
+</script>
 
 *   [API Documentation](#api)
 *   [Source code](https://github.com/material-components/material-web/tree/main/focus)

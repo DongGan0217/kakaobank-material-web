@@ -41,7 +41,7 @@ outlined, and text.
     alt="A phone showing a payment screen with a green filled button that says 'Make
 payment'"
     title="There are 5 types of common buttons"
-    src="images/button/hero.webp">
+    src="images/button/hero.svg">
 
 </catalog-component-header>
 

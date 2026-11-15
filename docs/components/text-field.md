@@ -32,7 +32,7 @@ users enter text into a UI.
 
 </catalog-component-header-title>
 
-<img class="hero" src="images/textfield/hero.webp" alt="Several text fields in a form"
+<img class="hero" src="images/textfield/hero.svg" alt="Several text fields in a form"
 title="Text fields">
 
 </catalog-component-header>

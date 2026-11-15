@@ -40,7 +40,7 @@ user needs to select one or more options from a list.
 
 <img
     class="hero"
-    src="images/checkbox/hero.webp"
+    src="images/checkbox/hero.svg"
     alt="A list of burger additions represented with checkboxes"
     title="Checkboxes in a list of items.">
 

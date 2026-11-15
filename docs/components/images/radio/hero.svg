@@ -1,0 +1,45 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 480' width='100%' height='100%'>
+  <defs>
+    <linearGradient id='bgGradient' x1='0%' y1='0%' x2='100%' y2='100%'>
+      <stop offset='0%' stop-color='#FFFDF0'/>
+      <stop offset='50%' stop-color='#F8F9FA'/>
+      <stop offset='100%' stop-color='#EDF0F3'/>
+    </linearGradient>
+    <filter id='cardShadow' x='-10%' y='-10%' width='120%' height='125%'>
+      <feDropShadow dx='0' dy='12' stdDeviation='16' flood-color='#191F28' flood-opacity='0.06'/>
+    </filter>
+  </defs>
+
+  <!-- Background Surface -->
+  <rect width='800' height='480' fill='url(#bgGradient)'/>
+
+  <!-- Decorative KakaoBank Accent Glow -->
+  <circle cx='680' cy='80' r='140' fill='#FFE100' opacity='0.18'/>
+  <circle cx='100' cy='400' r='120' fill='#FFE100' opacity='0.12'/>
+
+  <!-- Main Showcase Container Card -->
+  <rect x='100' y='40' width='600' height='400' rx='28' fill='#FFFFFF' stroke='#E5E8EB' stroke-width='1.5' filter='url(#cardShadow)'/>
+
+  <!-- KakaoBank Header Tag -->
+  <rect x='140' y='75' width='120' height='32' rx='8' fill='#FFE100'/>
+  <text x='200' y='96' fill='#191F28' font-family='Pretendard, sans-serif' font-size='13' font-weight='bold' text-anchor='middle'>kakaobank</text>
+
+  <!-- Title & Description -->
+  <text x='140' y='142' fill='#191F28' font-family='Pretendard, sans-serif' font-size='24' font-weight='800'>Radio (카카오뱅크 라디오 버튼)</text>
+  <text x='140' y='168' fill='#76808E' font-family='Pretendard, sans-serif' font-size='14'>단일 송금 주기 및 계좌 옵션 선택기</text>
+
+  <!-- Component Interactive Graphic -->
+  
+            <rect x='200' y='190' width='400' height='54' rx='16' fill='#F8F9FA' stroke='#FFE100' stroke-width='1.5'/>
+            <circle cx='230' cy='217' r='10' fill='#FFFFFF' stroke='#FFE100' stroke-width='2'/>
+            <circle cx='230' cy='217' r='5' fill='#191F28'/>
+            <text x='255' y='222' fill='#191F28' font-family='Pretendard, sans-serif' font-size='15' font-weight='bold'>매월 지정일 자동 이체 (추천)</text>
+            
+            <rect x='200' y='254' width='400' height='54' rx='16' fill='#FFFFFF' stroke='#E5E8EB'/>
+            <circle cx='230' cy='281' r='10' fill='#FFFFFF' stroke='#D1D6DB' stroke-width='2'/>
+            <text x='255' y='286' fill='#76808E' font-family='Pretendard, sans-serif' font-size='15'>매주 특정 요일 이체</text>
+        
+
+  <!-- Footer Subtle Watermark -->
+  <text x='660' y='410' fill='#B0B8C1' font-family='Pretendard, sans-serif' font-size='12' font-weight='600' text-anchor='end'>KakaoBank Material Web M3</text>
+</svg>

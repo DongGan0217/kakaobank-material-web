@@ -38,9 +38,91 @@ Sliders can use icons or labels to represent a numeric or relative scale.
 <img
     class="hero"
     alt="Sound settings screen with sliders labeled 'Media volume', and 'Call volume'."
-    src="images/slider/hero.webp">
+    src="images/slider/hero.svg">
 
 </catalog-component-header>
+
+<!-- KakaoBank Interactive Options Playground & Live Sandbox -->
+<div class="kb-playground-container">
+  <div class="kb-playground-header">
+    <div class="kb-playground-title">
+      <span>🛠️ Slider (슬라이더) 실시간 대출/적금 옵션 샌드박스</span>
+      <span class="kb-playground-badge">Live Interactive</span>
+    </div>
+    <span style="font-size: 12px; color: #4E5968;">슬라이더를 드래그하여 기간과 대출 한도를 실시간 조절해보세요.</span>
+  </div>
+  <div class="kb-playground-body">
+    <div class="kb-playground-controls">
+      <div class="kb-control-group">
+        <label class="kb-control-label" for="kb-slider-type">슬라이더 유형 (Type):</label>
+        <select id="kb-slider-type" class="kb-control-select" onchange="updateSliderDemo()">
+          <option value="period" selected>대출 기간 조절 (12~60개월)</option>
+          <option value="amount">대출 금액 조절 (100만~5,000만원)</option>
+        </select>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px;">
+        <label class="kb-control-checkbox">
+          <input id="kb-slider-labeled" type="checkbox" checked onchange="updateSliderDemo()" />
+          <span>값 레이블 풍선 표시 (Labeled)</span>
+        </label>
+        <label class="kb-control-checkbox">
+          <input id="kb-slider-disabled" type="checkbox" onchange="updateSliderDemo()" />
+          <span>비활성화 (Disabled)</span>
+        </label>
+      </div>
+    </div>
+    <div class="kb-playground-canvas" id="kb-slider-canvas" style="min-height: 160px; display: flex; flex-direction: column; justify-content: center; padding: 24px; box-sizing: border-box;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+        <span id="kb-slider-title" style="font-size: 14px; font-weight: 600; color: #4E5968;">대출 기간</span>
+        <span id="kb-slider-val-display" style="font-size: 22px; font-weight: 800; color: #3182F6;">24개월</span>
+      </div>
+      <input id="kb-slider-input" type="range" min="12" max="60" step="6" value="24" oninput="updateSliderDemo()" style="width: 100%; height: 8px; accent-color: #FFE100; cursor: pointer;" />
+      <div style="display: flex; justify-content: space-between; font-size: 11px; color: #8B95A1; margin-top: 6px;">
+        <span id="kb-slider-min">12개월</span>
+        <span id="kb-slider-max">60개월</span>
+      </div>
+    </div>
+  </div>
+  <div class="kb-playground-footer">
+    <pre class="kb-code-preview" id="kb-slider-code">&lt;md-slider min="12" max="60" step="6" value="24" labeled&gt;&lt;/md-slider&gt;</pre>
+    <button class="kb-copy-code-btn" type="button" onclick="navigator.clipboard.writeText(document.getElementById('kb-slider-code').innerText); this.innerText='복사 완료!'; setTimeout(()=>this.innerText='코드 복사', 1500)">코드 복사</button>
+  </div>
+</div>
+<script>
+  function updateSliderDemo() {
+    const type = document.getElementById('kb-slider-type').value;
+    const labeled = document.getElementById('kb-slider-labeled').checked;
+    const disabled = document.getElementById('kb-slider-disabled').checked;
+    const input = document.getElementById('kb-slider-input');
+    const title = document.getElementById('kb-slider-title');
+    const valDisplay = document.getElementById('kb-slider-val-display');
+    const minSpan = document.getElementById('kb-slider-min');
+    const maxSpan = document.getElementById('kb-slider-max');
+    const code = document.getElementById('kb-slider-code');
+
+    input.disabled = disabled;
+
+    if (type === 'period') {
+      title.innerText = '대출 기간';
+      minSpan.innerText = '12개월';
+      maxSpan.innerText = '60개월';
+      input.min = '12';
+      input.max = '60';
+      input.step = '6';
+      valDisplay.innerText = input.value + '개월';
+      code.innerText = `<md-slider min="12" max="60" step="6" value="${input.value}" ${labeled ? 'labeled' : ''} ${disabled ? 'disabled' : ''} style="--md-slider-active-track-color: #FFE100; --md-slider-handle-color: #191F28;"></md-slider>`;
+    } else {
+      title.innerText = '대출 희망 금액';
+      minSpan.innerText = '100만원';
+      maxSpan.innerText = '5,000만원';
+      input.min = '100';
+      input.max = '5000';
+      input.step = '100';
+      valDisplay.innerText = Number(input.value).toLocaleString() + '만원';
+      code.innerText = `<md-slider min="100" max="5000" step="100" value="${input.value}" ${labeled ? 'labeled' : ''} ${disabled ? 'disabled' : ''} style="--md-slider-active-track-color: #FFE100; --md-slider-handle-color: #191F28;"></md-slider>`;
+    }
+  }
+</script>
 
 *   [Design article](https://m3.material.io/components/sliders) <!-- {.external} -->
 *   [API Documentation](#api)

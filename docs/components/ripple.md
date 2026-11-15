@@ -37,7 +37,7 @@ state. A layer can be applied to an entire element or in a circular shape.
 
 </catalog-component-header-title>
 
-<img src="images/ripple/hero.gif" alt="Two containers that display a bounded and unbounded ripple on interaction."
+<img src="images/ripple/hero.svg" alt="Two containers that display a bounded and unbounded ripple on interaction."
 title="A bounded and unbounded ripple.">
 
 </catalog-component-header>

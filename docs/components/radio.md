@@ -30,11 +30,75 @@ people select one option from a set of options.
 
 <img
     class="hero"
-    src="images/radio/hero.webp"
+    src="images/radio/hero.svg"
     alt="A list of items with radio buttons and one selected."
     title="Radio buttons">
 
 </catalog-component-header>
+
+<!-- KakaoBank Interactive Options Playground & Live Sandbox -->
+<div class="kb-playground-container">
+  <div class="kb-playground-header">
+    <div class="kb-playground-title">
+      <span>🛠️ Radio (라디오 버튼) 실시간 옵션 샌드박스</span>
+      <span class="kb-playground-badge">Live Interactive</span>
+    </div>
+    <span style="font-size: 12px; color: #4E5968;">송금 및 자동이체 주기 단일 선택 옵션을 조작해보세요.</span>
+  </div>
+  <div class="kb-playground-body">
+    <div class="kb-playground-controls">
+      <div class="kb-control-group">
+        <label class="kb-control-label" for="kb-radio-theme">라디오 테마 색상 (Theme):</label>
+        <select id="kb-radio-theme" class="kb-control-select" onchange="updateRadioDemo()">
+          <option value="#FFE100" selected>카카오 옐로우 (#FFE100 / #191F28)</option>
+          <option value="#3182F6">포인트 블루 (#3182F6)</option>
+          <option value="#191F28">다크 차콜 (#191F28)</option>
+        </select>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px;">
+        <label class="kb-control-checkbox">
+          <input id="kb-radio-disabled" type="checkbox" onchange="updateRadioDemo()" />
+          <span>비활성화 (Disabled)</span>
+        </label>
+      </div>
+    </div>
+    <div class="kb-playground-canvas" id="kb-radio-canvas" style="min-height: 160px; display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 20px;">
+      <label style="display: flex; align-items: center; gap: 12px; cursor: pointer; font-size: 15px; font-weight: 600; color: #191F28;">
+        <input type="radio" name="kb-live-radio" id="kb-r1" checked onchange="updateRadioDemo()" style="width: 20px; height: 20px; accent-color: #FFE100; cursor: pointer;" />
+        <span>매월 지정일 자동이체 (추천)</span>
+      </label>
+      <label style="display: flex; align-items: center; gap: 12px; cursor: pointer; font-size: 15px; font-weight: 500; color: #4E5968;">
+        <input type="radio" name="kb-live-radio" id="kb-r2" onchange="updateRadioDemo()" style="width: 20px; height: 20px; accent-color: #FFE100; cursor: pointer;" />
+        <span>매주 특정 요일 이체</span>
+      </label>
+      <label style="display: flex; align-items: center; gap: 12px; cursor: pointer; font-size: 15px; font-weight: 500; color: #4E5968;">
+        <input type="radio" name="kb-live-radio" id="kb-r3" onchange="updateRadioDemo()" style="width: 20px; height: 20px; accent-color: #FFE100; cursor: pointer;" />
+        <span>매영업일 자동 이체</span>
+      </label>
+    </div>
+  </div>
+  <div class="kb-playground-footer">
+    <pre class="kb-code-preview" id="kb-radio-code">&lt;md-radio name="transfer-cycle" value="monthly" checked&gt;&lt;/md-radio&gt;
+&lt;label for="monthly"&gt;매월 지정일 자동이체 (추천)&lt;/label&gt;</pre>
+    <button class="kb-copy-code-btn" type="button" onclick="navigator.clipboard.writeText(document.getElementById('kb-radio-code').innerText); this.innerText='복사 완료!'; setTimeout(()=>this.innerText='코드 복사', 1500)">코드 복사</button>
+  </div>
+</div>
+<script>
+  function updateRadioDemo() {
+    const theme = document.getElementById('kb-radio-theme').value;
+    const disabled = document.getElementById('kb-radio-disabled').checked;
+    const code = document.getElementById('kb-radio-code');
+
+    const radios = [document.getElementById('kb-r1'), document.getElementById('kb-r2'), document.getElementById('kb-r3')];
+    radios.forEach(r => {
+      r.style.accentColor = theme;
+      r.disabled = disabled;
+    });
+
+    let selectedVal = document.getElementById('kb-r1').checked ? 'monthly' : (document.getElementById('kb-r2').checked ? 'weekly' : 'daily');
+    code.innerText = `<md-radio name="transfer-cycle" value="${selectedVal}" checked ${disabled ? 'disabled' : ''} style="--md-radio-selected-icon-color: ${theme};"></md-radio>\n<label>선택 옵션: ${selectedVal}</label>`;
+  }
+</script>
 
 *   [Design article](https://m3.material.io/components/radio-button) <!-- {.external} -->
 *   [API Documentation](#api)

@@ -34,10 +34,98 @@ related content that are at the same level of hierarchy.
 
 <img
   class="hero"
-  src="images/tabs/hero.webp"
+  src="images/tabs/hero.svg"
   alt="Media gallery screen with tabs labeled 'Video', 'Photos', and 'Audio'.">
 
 </catalog-component-header>
+
+<!-- KakaoBank Interactive Options Playground & Live Sandbox -->
+<div class="kb-playground-container">
+  <div class="kb-playground-header">
+    <div class="kb-playground-title">
+      <span>🛠️ Tabs (탭 바) 실시간 옵션 샌드박스</span>
+      <span class="kb-playground-badge">Live Interactive</span>
+    </div>
+    <span style="font-size: 12px; color: #4E5968;">금융 거래 내역 뷰 전환 탭을 실시간으로 조작해보세요.</span>
+  </div>
+  <div class="kb-playground-body">
+    <div class="kb-playground-controls">
+      <div class="kb-control-group">
+        <label class="kb-control-label" for="kb-tabs-variant">탭 형태 (Variant):</label>
+        <select id="kb-tabs-variant" class="kb-control-select" onchange="updateTabsDemo()">
+          <option value="primary" selected>Primary (밑줄 인디케이터 바)</option>
+          <option value="secondary">Secondary (서피스 캡슐형)</option>
+        </select>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px;">
+        <label class="kb-control-checkbox">
+          <input id="kb-tabs-icon" type="checkbox" onchange="updateTabsDemo()" />
+          <span>아이콘 포함 (with Icon)</span>
+        </label>
+      </div>
+    </div>
+    <div class="kb-playground-canvas" id="kb-tabs-canvas" style="min-height: 160px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 24px;">
+      <div id="kb-tabs-container" style="width: 100%; max-width: 420px; display: flex; border-bottom: 2px solid #E5E8EB;">
+        <div id="kb-tab-0" onclick="selectTab(0)" style="flex: 1; text-align: center; padding: 12px 0; font-size: 15px; font-weight: 700; color: #191F28; border-bottom: 3px solid #191F28; margin-bottom: -2px; cursor: pointer;">
+          <span id="kb-tab-icon-0" style="display: none; margin-right: 4px;">📋</span>전체 내역
+        </div>
+        <div id="kb-tab-1" onclick="selectTab(1)" style="flex: 1; text-align: center; padding: 12px 0; font-size: 15px; font-weight: 500; color: #8B95A1; border-bottom: 3px solid transparent; margin-bottom: -2px; cursor: pointer;">
+          <span id="kb-tab-icon-1" style="display: none; margin-right: 4px;">💰</span>입금만
+        </div>
+        <div id="kb-tab-2" onclick="selectTab(2)" style="flex: 1; text-align: center; padding: 12px 0; font-size: 15px; font-weight: 500; color: #8B95A1; border-bottom: 3px solid transparent; margin-bottom: -2px; cursor: pointer;">
+          <span id="kb-tab-icon-2" style="display: none; margin-right: 4px;">💳</span>출금만
+        </div>
+      </div>
+      <div id="kb-tab-panel" style="margin-top: 16px; font-size: 13px; color: #4E5968;">
+        현재 선택된 뷰: <strong>전체 내역 (모든 입출금 내역 표시)</strong>
+      </div>
+    </div>
+  </div>
+  <div class="kb-playground-footer">
+    <pre class="kb-code-preview" id="kb-tabs-code">&lt;md-tabs active-tab-index="0"&gt;
+  &lt;md-primary-tab&gt;전체 내역&lt;/md-primary-tab&gt;
+  &lt;md-primary-tab&gt;입금만&lt;/md-primary-tab&gt;
+  &lt;md-primary-tab&gt;출금만&lt;/md-primary-tab&gt;
+&lt;/md-tabs&gt;</pre>
+    <button class="kb-copy-code-btn" type="button" onclick="navigator.clipboard.writeText(document.getElementById('kb-tabs-code').innerText); this.innerText='복사 완료!'; setTimeout(()=>this.innerText='코드 복사', 1500)">코드 복사</button>
+  </div>
+</div>
+<script>
+  let currentActiveTab = 0;
+  function selectTab(idx) {
+    currentActiveTab = idx;
+    updateTabsDemo();
+  }
+
+  function updateTabsDemo() {
+    const variant = document.getElementById('kb-tabs-variant').value;
+    const hasIcon = document.getElementById('kb-tabs-icon').checked;
+    const panel = document.getElementById('kb-tab-panel');
+    const code = document.getElementById('kb-tabs-code');
+
+    const tabNames = ['전체 내역 (모든 입출금 내역 표시)', '입금만 (타행 입금 및 월급 입금 내역)', '출금만 (카드 결제 및 자동이체 출금)'];
+    panel.innerHTML = `현재 선택된 뷰: <strong>${tabNames[currentActiveTab]}</strong>`;
+
+    for (let i = 0; i < 3; i++) {
+      const tabEl = document.getElementById('kb-tab-' + i);
+      const iconEl = document.getElementById('kb-tab-icon-' + i);
+      iconEl.style.display = hasIcon ? 'inline' : 'none';
+
+      if (i === currentActiveTab) {
+        tabEl.style.fontWeight = '700';
+        tabEl.style.color = '#191F28';
+        tabEl.style.borderBottom = variant === 'primary' ? '3px solid #191F28' : '3px solid #FFE100';
+      } else {
+        tabEl.style.fontWeight = '500';
+        tabEl.style.color = '#8B95A1';
+        tabEl.style.borderBottom = '3px solid transparent';
+      }
+    }
+
+    const tag = variant === 'secondary' ? 'md-secondary-tab' : 'md-primary-tab';
+    code.innerText = `<md-tabs active-tab-index="${currentActiveTab}">\n  <${tag}>전체 내역</${tag}>\n  <${tag}>입금만</${tag}>\n  <${tag}>출금만</${tag}>\n</md-tabs>`;
+  }
+</script>
 
 *   [Design article](https://m3.material.io/components/tabs) <!-- {.external} -->
 *   [API Documentation](#api)

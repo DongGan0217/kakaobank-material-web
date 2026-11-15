@@ -30,9 +30,102 @@ people take supplementary actions with a single tap.
 <img
     class="hero"
     alt="The top half of a phone application with a back icon button at the top left and three icon buttons on the top right, heart, share, and three dot."
-    src="images/iconbutton/hero.webp">
+    src="images/iconbutton/hero.svg">
 
 </catalog-component-header>
+
+<!-- KakaoBank Interactive Options Playground & Live Sandbox -->
+<div class="kb-playground-container">
+  <div class="kb-playground-header">
+    <div class="kb-playground-title">
+      <span>🛠️ Icon Button (아이콘 버튼) 실시간 옵션 샌드박스</span>
+      <span class="kb-playground-badge">Live Interactive</span>
+    </div>
+    <span style="font-size: 12px; color: #4E5968;">형태와 아이콘을 실시간으로 변경해보세요.</span>
+  </div>
+  <div class="kb-playground-body">
+    <div class="kb-playground-controls">
+      <div class="kb-control-group">
+        <label class="kb-control-label" for="kb-ib-variant">버튼 형태 (Variant):</label>
+        <select id="kb-ib-variant" class="kb-control-select" onchange="updateIbDemo()">
+          <option value="standard" selected>Standard (기본 투명형)</option>
+          <option value="filled">Filled (카카오 옐로우 채움형)</option>
+          <option value="tonal">Filled Tonal (톤앤톤 그레이)</option>
+          <option value="outlined">Outlined (테두리 아웃라인형)</option>
+        </select>
+      </div>
+      <div class="kb-control-group">
+        <label class="kb-control-label" for="kb-ib-icon">아이콘 선택 (Icon):</label>
+        <select id="kb-ib-icon" class="kb-control-select" onchange="updateIbDemo()">
+          <option value="kb_ic-arrow-left" selected>arrow-left (뒤로가기)</option>
+          <option value="kb_ic-close">close (닫기)</option>
+          <option value="kb_ic-call">call (고객센터 통화)</option>
+          <option value="kb_ic-add">add (추가하기)</option>
+          <option value="kb_ic-chevron-right">chevron-right (다음)</option>
+        </select>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px;">
+        <label class="kb-control-checkbox">
+          <input id="kb-ib-toggle" type="checkbox" onchange="updateIbDemo()" />
+          <span>토글 버튼 활성화 (Toggle Selected)</span>
+        </label>
+        <label class="kb-control-checkbox">
+          <input id="kb-ib-disabled" type="checkbox" onchange="updateIbDemo()" />
+          <span>비활성화 (Disabled)</span>
+        </label>
+      </div>
+    </div>
+    <div class="kb-playground-canvas" id="kb-ib-canvas" style="min-height: 140px; display: flex; align-items: center; justify-content: center;">
+      <button id="kb-ib-render" type="button" style="width: 48px; height: 48px; border-radius: 50%; border: none; background: transparent; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s ease;">
+        <img id="kb-ib-render-img" src="/../images/kb-icons/svg/kb_ic-arrow-left.svg" width="24" height="24" alt="icon" />
+      </button>
+    </div>
+  </div>
+  <div class="kb-playground-footer">
+    <pre class="kb-code-preview" id="kb-ib-code">&lt;md-icon-button&gt;
+  &lt;md-icon&gt;&lt;img src="/../images/kb-icons/svg/kb_ic-arrow-left.svg" /&gt;&lt;/md-icon&gt;
+&lt;/md-icon-button&gt;</pre>
+    <button class="kb-copy-code-btn" type="button" onclick="navigator.clipboard.writeText(document.getElementById('kb-ib-code').innerText); this.innerText='복사 완료!'; setTimeout(()=>this.innerText='코드 복사', 1500)">코드 복사</button>
+  </div>
+</div>
+<script>
+  function updateIbDemo() {
+    const variant = document.getElementById('kb-ib-variant').value;
+    const iconName = document.getElementById('kb-ib-icon').value;
+    const isToggle = document.getElementById('kb-ib-toggle').checked;
+    const disabled = document.getElementById('kb-ib-disabled').checked;
+
+    const btn = document.getElementById('kb-ib-render');
+    const img = document.getElementById('kb-ib-render-img');
+    const code = document.getElementById('kb-ib-code');
+
+    img.src = '/../images/kb-icons/svg/' + iconName + '.svg';
+    btn.disabled = disabled;
+    btn.style.opacity = disabled ? '0.38' : '1';
+    btn.style.cursor = disabled ? 'not-allowed' : 'pointer';
+
+    let tag = 'md-icon-button';
+    if (variant === 'standard') {
+      btn.style.background = isToggle ? '#F8F9FA' : 'transparent';
+      btn.style.border = isToggle ? '1.5px solid #191F28' : 'none';
+      tag = 'md-icon-button';
+    } else if (variant === 'filled') {
+      btn.style.background = isToggle ? '#191F28' : '#FFE100';
+      btn.style.border = 'none';
+      tag = 'md-filled-icon-button';
+    } else if (variant === 'tonal') {
+      btn.style.background = isToggle ? '#E5E8EB' : '#F8F9FA';
+      btn.style.border = 'none';
+      tag = 'md-filled-tonal-icon-button';
+    } else if (variant === 'outlined') {
+      btn.style.background = isToggle ? '#F8F9FA' : 'transparent';
+      btn.style.border = '1px solid #D1D6DB';
+      tag = 'md-outlined-icon-button';
+    }
+
+    code.innerText = `<${tag} ${isToggle ? 'toggle selected' : ''} ${disabled ? 'disabled' : ''}>\n  <md-icon><img src="/../images/kb-icons/svg/${iconName}.svg" /></md-icon>\n</${tag}>`;
+  }
+</script>
 
 *   [Design article](https://m3.material.io/components/icon-buttons) <!-- {.external} -->
 *   [API Documentation](#api)
