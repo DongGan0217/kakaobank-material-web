@@ -156,6 +156,24 @@
             >{{ file.data.name }}</md-list-item>
             {% endif %}
           {% endfor %}
+          <md-divider role="separator"></md-divider>
+          <!-- Assets section -->
+          <md-item><div slot="headline">Assets</div></md-item>
+          <md-list-item
+            href="/assets/images/"
+            role="menuitem"
+            {% if page.url == '/assets/images/' %}selected{% endif %}
+            type="link"
+            tabindex="0"
+            style="font-weight: 700; color: #191f28;"
+          >★ Image Library</md-list-item>
+          <md-list-item
+            href="/components/icon/"
+            role="menuitem"
+            {% if page.url == '/components/icon/' %}selected{% endif %}
+            type="link"
+            tabindex="{% if page.url == '/components/icon/' %}0{% else %}-1{% endif %}"
+          >Icon Library (140+ Vectors)</md-list-item>
         </md-list>
       </nav-drawer>
     </lit-island>

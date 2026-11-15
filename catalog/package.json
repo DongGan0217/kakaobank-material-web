@@ -119,6 +119,7 @@
       "files": [
         "../docs/components",
         "../docs/theming",
+        "../docs/assets",
         "../docs/*.md",
         "../docs/images/",
         "scripts/copy-docs.mjs"
@@ -129,7 +130,8 @@
         "site/theming/**/*.md",
         "site/theming/images",
         "site/about/**/*.md",
-        "site/about/images"
+        "site/about/images",
+        "site/assets/**/*.md"
       ]
     },
     "serve:dev": {
