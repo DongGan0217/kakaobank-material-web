@@ -199,8 +199,10 @@ export class NavDrawer extends SignalElement(LitElement) {
         100dvh - var(--catalog-top-app-bar-height) -
           var(--_pane-margin-block-end)
       );
-      background-color: var(--md-sys-color-surface);
+      background-color: var(--md-sys-color-surface, #FFFFFF);
       border-radius: var(--catalog-shape-xl);
+      border: 1px solid var(--md-sys-color-outline-variant, #E5E8EB);
+      transition: background-color 0.2s ease, border-color 0.2s ease;
     }
 
     .pane,
@@ -264,12 +266,13 @@ export class NavDrawer extends SignalElement(LitElement) {
     }
 
     aside {
-      transition: transform 0.5s cubic-bezier(0.3, 0, 0, 1);
+      transition: transform 0.5s cubic-bezier(0.3, 0, 0, 1), background-color 0.2s ease, border-color 0.2s ease;
       position: fixed;
       isolation: isolate;
       inset: var(--catalog-top-app-bar-height) 0 0 0;
       z-index: 12;
-      background-color: var(--md-sys-color-surface-container);
+      background-color: var(--md-sys-color-surface-container, #FFFFFF);
+      border-right: 1px solid var(--md-sys-color-outline-variant, #E5E8EB);
       overflow: hidden;
     }
 

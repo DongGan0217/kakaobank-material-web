@@ -45,6 +45,134 @@ payment'"
 
 </catalog-component-header>
 
+<!-- KakaoBank Interactive Options Playground & Live Sandbox -->
+<div class="kb-playground-container">
+  <div class="kb-playground-header">
+    <div class="kb-playground-title">
+      <span>🛠️ Button 옵션 실시간 미리보기 샌드박스</span>
+      <span class="kb-playground-badge">Live Interactive</span>
+    </div>
+    <span style="font-size: 12px; color: #4E5968;">옵션을 변경하면 컴포넌트가 즉시 실시간 반영됩니다.</span>
+  </div>
+  <div class="kb-playground-body">
+    <div class="kb-playground-controls">
+      <div class="kb-control-group">
+        <label class="kb-control-label" for="kb-btn-variant">버튼 형태 (Variant):</label>
+        <select id="kb-btn-variant" class="kb-control-select" onchange="updateBtnDemo()">
+          <option value="filled" selected>Filled (카카오 옐로우 시그니처)</option>
+          <option value="outlined">Outlined (테두리 아웃라인)</option>
+          <option value="elevated">Elevated (부유 그림자)</option>
+          <option value="tonal">Filled Tonal (톤앤톤)</option>
+          <option value="text">Text (텍스트 링크형)</option>
+        </select>
+      </div>
+      <div class="kb-control-group">
+        <label class="kb-control-label" for="kb-btn-label">버튼 문구 (Label):</label>
+        <input id="kb-btn-label" class="kb-control-input" type="text" value="카카오뱅크 이체하기" oninput="updateBtnDemo()" />
+      </div>
+      <div class="kb-control-group">
+        <label class="kb-control-label" for="kb-btn-size">터치 타깃 규격 (Size):</label>
+        <select id="kb-btn-size" class="kb-control-select" onchange="updateBtnDemo()">
+          <option value="52" selected>52px (카카오뱅크 모바일/웹 표준)</option>
+          <option value="40">40px (구글 기본 M3)</option>
+        </select>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px;">
+        <label class="kb-control-checkbox">
+          <input id="kb-btn-icon" type="checkbox" checked onchange="updateBtnDemo()" />
+          <span>아이콘 포함 (with Icon)</span>
+        </label>
+        <label class="kb-control-checkbox">
+          <input id="kb-btn-disabled" type="checkbox" onchange="updateBtnDemo()" />
+          <span>비활성화 (Disabled)</span>
+        </label>
+      </div>
+    </div>
+    <div class="kb-playground-canvas" id="kb-btn-canvas">
+      <!-- Live Render Target -->
+      <button id="kb-btn-render" type="button" style="height: 52px; background: #FFE100; border: none; border-radius: 16px; padding: 0 24px; font-weight: 700; font-size: 16px; color: #191F28; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); transition: all 0.2s ease;">
+        <img id="kb-btn-render-icon" src="/images/kb-icons/svg/kb_ic-arrow-right.svg" width="18" height="18" alt="icon" />
+        <span id="kb-btn-render-text">카카오뱅크 이체하기</span>
+      </button>
+    </div>
+  </div>
+  <div class="kb-playground-footer">
+    <pre class="kb-code-preview" id="kb-btn-code">&lt;md-filled-button style="--md-filled-button-container-height: 52px; --md-filled-button-container-shape: 16px;"&gt;
+  &lt;md-icon slot="icon"&gt;&lt;img src="/images/kb-icons/svg/kb_ic-arrow-right.svg" /&gt;&lt;/md-icon&gt;
+  카카오뱅크 이체하기
+&lt;/md-filled-button&gt;</pre>
+    <button class="kb-copy-code-btn" type="button" onclick="navigator.clipboard.writeText(document.getElementById('kb-btn-code').innerText); this.innerText='복사 완료!'; setTimeout(()=>this.innerText='코드 복사', 1500)">코드 복사</button>
+  </div>
+</div>
+
+<script>
+  function updateBtnDemo() {
+    const variant = document.getElementById('kb-btn-variant').value;
+    const label = document.getElementById('kb-btn-label').value || '이체하기';
+    const size = document.getElementById('kb-btn-size').value;
+    const hasIcon = document.getElementById('kb-btn-icon').checked;
+    const disabled = document.getElementById('kb-btn-disabled').checked;
+
+    const btn = document.getElementById('kb-btn-render');
+    const icon = document.getElementById('kb-btn-render-icon');
+    const text = document.getElementById('kb-btn-render-text');
+    const code = document.getElementById('kb-btn-code');
+
+    text.innerText = label;
+    icon.style.display = hasIcon ? 'inline-block' : 'none';
+    btn.disabled = disabled;
+    btn.style.height = size + 'px';
+    btn.style.borderRadius = size === '52' ? '16px' : '20px';
+
+    if (disabled) {
+      btn.style.opacity = '0.4';
+      btn.style.cursor = 'not-allowed';
+      btn.style.boxShadow = 'none';
+    } else {
+      btn.style.opacity = '1';
+      btn.style.cursor = 'pointer';
+    }
+
+    let tagName = 'md-filled-button';
+    if (variant === 'filled') {
+      tagName = 'md-filled-button';
+      btn.style.background = '#FFE100';
+      btn.style.color = '#191F28';
+      btn.style.border = 'none';
+      btn.style.boxShadow = disabled ? 'none' : '0 4px 12px rgba(0,0,0,0.06)';
+    } else if (variant === 'outlined') {
+      tagName = 'md-outlined-button';
+      btn.style.background = 'transparent';
+      btn.style.color = '#191F28';
+      btn.style.border = '1.5px solid #191F28';
+      btn.style.boxShadow = 'none';
+    } else if (variant === 'elevated') {
+      tagName = 'md-elevated-button';
+      btn.style.background = '#FFFFFF';
+      btn.style.color = '#191F28';
+      btn.style.border = '1px solid #E5E8EB';
+      btn.style.boxShadow = disabled ? 'none' : '0 6px 16px rgba(0,0,0,0.1)';
+    } else if (variant === 'tonal') {
+      tagName = 'md-filled-tonal-button';
+      btn.style.background = '#F2F4F6';
+      btn.style.color = '#191F28';
+      btn.style.border = 'none';
+      btn.style.boxShadow = 'none';
+    } else if (variant === 'text') {
+      tagName = 'md-text-button';
+      btn.style.background = 'transparent';
+      btn.style.color = '#191F28';
+      btn.style.border = 'none';
+      btn.style.boxShadow = 'none';
+    }
+
+    const iconSnippet = hasIcon ? '\n  <md-icon slot="icon"><img src="/images/kb-icons/svg/kb_ic-arrow-right.svg" /></md-icon>' : '';
+    const disSnippet = disabled ? ' disabled' : '';
+    const codeStr = `<${tagName} style="--md-${variant}-button-container-height: ${size}px; --md-${variant}-button-container-shape: ${size==='52'?'16px':'20px'};"${disSnippet}>${iconSnippet}\n  ${label}\n</${tagName}>`;
+    code.innerText = codeStr;
+  }
+</script>
+
 *   [Design article](https://m3.material.io/components/buttons) <!-- {.external} -->
 *   [API Documentation](#api)
 *   [Source code](https://github.com/material-components/material-web/tree/main/button)

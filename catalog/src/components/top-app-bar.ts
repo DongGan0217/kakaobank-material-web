@@ -74,7 +74,7 @@ export class TopAppBar extends SignalElement(LitElement) {
               <md-icon-button
                 title="GitHub repository"
                 aria-label="GitHub repository"
-                href="https://github.com/material-components/material-web"
+                href="https://github.com/DongGan0217/kakaobank-material-web"
                 target="_blank">
                 <md-icon>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 96">
@@ -154,6 +154,14 @@ export class TopAppBar extends SignalElement(LitElement) {
   }
 
   static styles = css`
+    :host {
+      --md-sys-color-primary: #FFE100;
+      --md-sys-color-on-primary: #191F28;
+      --md-sys-color-surface: #FFFFFF;
+      --md-sys-color-surface-container: #FFFFFF;
+      --md-sys-color-on-surface: #191F28;
+    }
+
     :host,
     header {
       display: block;
@@ -167,9 +175,11 @@ export class TopAppBar extends SignalElement(LitElement) {
       align-items: center;
       box-sizing: border-box;
       padding: var(--catalog-spacing-m) var(--catalog-spacing-l);
-      background-color: var(--md-sys-color-surface-container);
-      color: var(--md-sys-color-on-surface);
+      background-color: var(--md-sys-color-surface-container, #FFFFFF);
+      color: var(--md-sys-color-on-surface, #191F28);
+      border-bottom: 1px solid var(--md-sys-color-outline-variant, #E5E8EB);
       z-index: 12;
+      transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
     }
 
     .default-content {

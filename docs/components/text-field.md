@@ -37,6 +37,121 @@ title="Text fields">
 
 </catalog-component-header>
 
+<!-- KakaoBank Interactive Options Playground & Live Sandbox -->
+<div class="kb-playground-container">
+  <div class="kb-playground-header">
+    <div class="kb-playground-title">
+      <span>🛠️ Text Field 옵션 실시간 미리보기 샌드박스</span>
+      <span class="kb-playground-badge">Live Interactive</span>
+    </div>
+    <span style="font-size: 12px; color: #4E5968;">텍스트 필드 옵션을 실시간으로 조작하고 입력해보세요.</span>
+  </div>
+  <div class="kb-playground-body">
+    <div class="kb-playground-controls">
+      <div class="kb-control-group">
+        <label class="kb-control-label" for="kb-tf-variant">스타일 형태 (Variant):</label>
+        <select id="kb-tf-variant" class="kb-control-select" onchange="updateTextFieldDemo()">
+          <option value="filled" selected>Filled (하단 라인 강조형)</option>
+          <option value="outlined">Outlined (전체 테두리형)</option>
+        </select>
+      </div>
+      <div class="kb-control-group">
+        <label class="kb-control-label" for="kb-tf-label">라벨 (Label):</label>
+        <input id="kb-tf-label" class="kb-control-input" type="text" value="이체 금액" oninput="updateTextFieldDemo()" />
+      </div>
+      <div class="kb-control-group">
+        <label class="kb-control-label" for="kb-tf-value">기본 입력값 (Value):</label>
+        <input id="kb-tf-value" class="kb-control-input" type="text" value="1,000,000" oninput="updateTextFieldDemo()" />
+      </div>
+      <div class="kb-control-group">
+        <label class="kb-control-label" for="kb-tf-support">도움말 (Supporting Text):</label>
+        <input id="kb-tf-support" class="kb-control-input" type="text" value="1일 최대 이체 한도: 5,000만원" oninput="updateTextFieldDemo()" />
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 4px;">
+        <label class="kb-control-checkbox">
+          <input id="kb-tf-error" type="checkbox" onchange="updateTextFieldDemo()" />
+          <span>오류 상태 (Error)</span>
+        </label>
+        <label class="kb-control-checkbox">
+          <input id="kb-tf-disabled" type="checkbox" onchange="updateTextFieldDemo()" />
+          <span>비활성화 (Disabled)</span>
+        </label>
+      </div>
+    </div>
+    <div class="kb-playground-canvas" id="kb-tf-canvas">
+      <!-- Live Render Target -->
+      <div id="kb-tf-wrapper" style="width: 85%; max-width: 380px;">
+        <div id="kb-tf-box" style="background: #F9FAFB; border-bottom: 2px solid #FFE100; border-radius: 12px 12px 0 0; padding: 10px 16px; transition: all 0.2s;">
+          <div id="kb-tf-render-label" style="font-size: 11px; font-weight: 700; color: #4E5968;">이체 금액</div>
+          <div style="display: flex; align-items: center; gap: 6px; margin-top: 4px;">
+            <span style="font-size: 15px; font-weight: 700; color: #191F28;">₩</span>
+            <input id="kb-tf-render-input" type="text" value="1,000,000" style="width: 100%; border: none; outline: none; background: transparent; font-size: 16px; font-weight: 700; color: #191F28; font-family: inherit;" />
+          </div>
+        </div>
+        <div id="kb-tf-render-support" style="font-size: 11px; color: #76808E; margin-top: 6px; padding-left: 8px;">1일 최대 이체 한도: 5,000만원</div>
+      </div>
+    </div>
+  </div>
+  <div class="kb-playground-footer">
+    <pre class="kb-code-preview" id="kb-tf-code">&lt;md-filled-text-field label="이체 금액" value="1,000,000" prefix-text="₩" supporting-text="1일 최대 이체 한도: 5,000만원"&gt;&lt;/md-filled-text-field&gt;</pre>
+    <button class="kb-copy-code-btn" type="button" onclick="navigator.clipboard.writeText(document.getElementById('kb-tf-code').innerText); this.innerText='복사 완료!'; setTimeout(()=>this.innerText='코드 복사', 1500)">코드 복사</button>
+  </div>
+</div>
+
+<script>
+  function updateTextFieldDemo() {
+    const variant = document.getElementById('kb-tf-variant').value;
+    const label = document.getElementById('kb-tf-label').value || '입력';
+    const val = document.getElementById('kb-tf-value').value || '';
+    const support = document.getElementById('kb-tf-support').value || '';
+    const isError = document.getElementById('kb-tf-error').checked;
+    const disabled = document.getElementById('kb-tf-disabled').checked;
+
+    const box = document.getElementById('kb-tf-box');
+    const labelEl = document.getElementById('kb-tf-render-label');
+    const inputEl = document.getElementById('kb-tf-render-input');
+    const supportEl = document.getElementById('kb-tf-render-support');
+    const wrap = document.getElementById('kb-tf-wrapper');
+    const code = document.getElementById('kb-tf-code');
+
+    labelEl.innerText = label;
+    inputEl.value = val;
+    supportEl.innerText = support;
+
+    if (disabled) {
+      wrap.style.opacity = '0.38';
+      inputEl.disabled = true;
+    } else {
+      wrap.style.opacity = '1';
+      inputEl.disabled = false;
+    }
+
+    if (variant === 'filled') {
+      box.style.background = '#F9FAFB';
+      box.style.borderRadius = '12px 12px 0 0';
+      box.style.border = 'none';
+      box.style.borderBottom = isError ? '2px solid #F04452' : '2px solid #FFE100';
+    } else {
+      box.style.background = '#FFFFFF';
+      box.style.borderRadius = '12px';
+      box.style.border = isError ? '1.5px solid #F04452' : '1.5px solid #D1D6DB';
+    }
+
+    if (isError) {
+      labelEl.style.color = '#F04452';
+      supportEl.style.color = '#F04452';
+    } else {
+      labelEl.style.color = '#4E5968';
+      supportEl.style.color = '#76808E';
+    }
+
+    const tag = variant === 'filled' ? 'md-filled-text-field' : 'md-outlined-text-field';
+    const errAttr = isError ? ' error' : '';
+    const disAttr = disabled ? ' disabled' : '';
+    code.innerText = `<${tag} label="${label}" value="${val}" prefix-text="₩" supporting-text="${support}"${errAttr}${disAttr}>\n</${tag}>`;
+  }
+</script>
+
 *   [Design article](https://m3.material.io/components/text-fields) <!-- {.external} -->
 *   [API Documentation](#api)
 *   [Source code](https://github.com/material-components/material-web/tree/main/textfield)
