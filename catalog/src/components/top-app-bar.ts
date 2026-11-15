@@ -58,7 +58,8 @@ export class TopAppBar extends SignalElement(LitElement) {
           </section>
 
           <a href="/" id="home-link">
-            Material Web
+            <span class="brand-badge">KB</span>
+            <span class="brand-title">KakaoBank Material Web</span>
             <md-focus-ring for="home-link"></md-focus-ring>
           </a>
 
@@ -188,6 +189,11 @@ export class TopAppBar extends SignalElement(LitElement) {
       align-items: center;
     }
 
+    md-icon-button {
+      color: var(--md-sys-color-on-surface, #191F28);
+      --md-icon-button-icon-color: var(--md-sys-color-on-surface, #191F28);
+    }
+
     md-icon-button:not(:defined) {
       width: 40px;
       height: 40px;
@@ -200,21 +206,46 @@ export class TopAppBar extends SignalElement(LitElement) {
     }
 
     a {
-      color: var(--md-sys-color-primary);
-      font-size: max(var(--catalog-title-l-font-size), 22px);
+      color: var(--md-sys-color-on-surface, #191F28);
+      font-size: max(var(--catalog-title-l-font-size), 20px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
       text-decoration: none;
       padding-inline: 12px;
       position: relative;
       outline: none;
       vertical-align: middle;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #FFE100;
+      color: #191F28;
+      font-weight: 800;
+      font-size: 13px;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+      flex-shrink: 0;
+    }
+
+    .brand-title {
+      color: var(--md-sys-color-on-surface, #191F28);
     }
 
     .start .menu-button {
       display: none;
+      color: var(--md-sys-color-on-surface, #191F28);
     }
 
     .start .home-button * {
-      color: var(--md-sys-color-primary);
+      color: var(--md-sys-color-primary, #FFE100);
     }
 
     .end {

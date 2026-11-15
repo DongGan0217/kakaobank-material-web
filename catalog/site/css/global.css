@@ -396,3 +396,36 @@ h1 {
   }
 }
 
+/* KakaoBank Global Icon Reset */
+md-icon,
+md-icon img,
+md-icon svg,
+[slot="icon"],
+[slot="icon"] img,
+[slot="icon"] svg,
+[slot="leading-icon"],
+[slot="leading-icon"] img,
+[slot="leading-icon"] svg,
+[slot="trailing-icon"],
+[slot="trailing-icon"] img,
+[slot="trailing-icon"] svg,
+.kb-btn-render-icon,
+.kb-sandbox-preview img,
+.kb-sandbox-preview svg {
+  min-height: unset !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+}
+
+md-filled-button [slot="icon"],
+md-elevated-button [slot="icon"],
+md-outlined-button [slot="icon"],
+md-text-button [slot="icon"],
+md-tonal-button [slot="icon"],
+.kb-btn-render-icon {
+  width: 18px !important;
+  height: 18px !important;
+  font-size: 18px !important;
+}
+
+

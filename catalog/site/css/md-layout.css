@@ -39,11 +39,69 @@ main > img {
   max-width: 100%;
 }
 
-img:not(figure *),
+main > p > img:not(figure *),
+main > img:not(figure *),
 figure {
   border-radius: var(--catalog-image-border-radius);
   min-height: 56px;
   object-fit: cover;
+}
+
+/* KakaoBank Icon Normalization & Overflow Reset */
+md-icon,
+md-icon img,
+md-icon svg,
+[slot="icon"],
+[slot="icon"] img,
+[slot="icon"] svg,
+[slot="leading-icon"],
+[slot="leading-icon"] img,
+[slot="leading-icon"] svg,
+[slot="trailing-icon"],
+[slot="trailing-icon"] img,
+[slot="trailing-icon"] svg,
+.kb-btn-render-icon,
+.kb-sandbox-preview img,
+.kb-sandbox-preview svg,
+.component-card-icon,
+.component-card-icon img,
+.component-card-icon svg {
+  min-height: unset !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+}
+
+/* Button & Chip specific icon constraints */
+md-filled-button [slot="icon"],
+md-elevated-button [slot="icon"],
+md-outlined-button [slot="icon"],
+md-text-button [slot="icon"],
+md-tonal-button [slot="icon"],
+.kb-btn-render-icon {
+  width: 18px !important;
+  height: 18px !important;
+  font-size: 18px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+md-chip [slot="icon"],
+md-filter-chip [slot="icon"],
+md-assist-chip [slot="icon"],
+md-input-chip [slot="icon"],
+md-suggestion-chip [slot="icon"] {
+  width: 16px !important;
+  height: 16px !important;
+  font-size: 16px !important;
+}
+
+md-icon-button md-icon,
+md-icon-button img,
+md-icon-button svg {
+  width: 24px !important;
+  height: 24px !important;
+  font-size: 24px !important;
 }
 
 catalog-component-header img {
