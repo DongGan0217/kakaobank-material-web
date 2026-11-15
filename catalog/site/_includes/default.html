@@ -73,17 +73,29 @@
   <body dsd-pending>
     <!-- Inlines the declarative shadow dom polyfill for FF since it's performance sensitive -->
     {% inlinejs "ssr-utils/dsd-polyfill.js" %}
-    <div id="kb-global-theme-switcher" class="kb-floating-switcher" aria-label="KakaoBank Theme Switcher">
-      <span class="kb-switcher-label">Theme:</span>
-      <button type="button" class="kb-theme-btn" data-theme-val="white" onclick="__setKbTheme('white')" title="Clean White & Yellow (기본)">
-        <span class="kb-dot dot-white"></span> White
-      </button>
-      <button type="button" class="kb-theme-btn" data-theme-val="slate" onclick="__setKbTheme('slate')" title="Cool Slate">
-        <span class="kb-dot dot-slate"></span> Slate
-      </button>
-      <button type="button" class="kb-theme-btn" data-theme-val="dark" onclick="__setKbTheme('dark')" title="Luxury Dark">
-        <span class="kb-dot dot-dark"></span> Dark
-      </button>
+    <!-- Global Multi-Design System Switcher & Theme Switcher -->
+    <div id="kb-global-header-tools" style="position: fixed; top: 14px; right: 20px; z-index: 1000; display: flex; align-items: center; gap: 8px;">
+      <div id="global-ds-switcher" class="global-ds-dropdown" style="display: flex; align-items: center; gap: 6px; background: var(--md-sys-color-surface-container-high, #f1f3f5); border: 1px solid var(--md-sys-color-outline-variant, #e5e8eb); padding: 5px 12px; border-radius: 9999px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); backdrop-filter: blur(8px);">
+        <span style="font-size: 13px;">🏦</span>
+        <select onchange="if(this.value) window.location.href=this.value" style="background: transparent; border: none; font-size: 12px; font-weight: 700; color: var(--md-sys-color-on-surface, #191f28); outline: none; cursor: pointer; font-family: inherit;">
+          <option value="http://localhost:8085" selected>카카오뱅크 M3 (Port 8085)</option>
+          <option value="http://localhost:8086">토스뱅크 M3 (Port 8086)</option>
+          <option value="http://localhost:8088/design-system-hub.html">🌐 통합 Hub 포털 (Port 8088)</option>
+        </select>
+      </div>
+
+      <div id="kb-global-theme-switcher" class="kb-floating-switcher" style="position: static;" aria-label="KakaoBank Theme Switcher">
+        <span class="kb-switcher-label">Theme:</span>
+        <button type="button" class="kb-theme-btn" data-theme-val="white" onclick="__setKbTheme('white')" title="Clean White & Yellow (기본)">
+          <span class="kb-dot dot-white"></span> White
+        </button>
+        <button type="button" class="kb-theme-btn" data-theme-val="slate" onclick="__setKbTheme('slate')" title="Cool Slate">
+          <span class="kb-dot dot-slate"></span> Slate
+        </button>
+        <button type="button" class="kb-theme-btn" data-theme-val="dark" onclick="__setKbTheme('dark')" title="Luxury Dark">
+          <span class="kb-dot dot-dark"></span> Dark
+        </button>
+      </div>
     </div>
     <script>
       (function() {
