@@ -12,7 +12,6 @@ order: 4
   <div class="kb-section-intro">
     <strong>📐 코너 래디우스 시각화 (Corner Radius Scale):</strong> 모바일 금융 인터페이스에 최적화된 둥근 모서리 규격을 실제 블록 형태로 직접 확인하세요. 마우스를 올리면 크기가 반응합니다.
   </div>
-
   <div class="kb-shape-grid">
     <!-- None -->
     <div class="kb-shape-card">
@@ -22,7 +21,6 @@ order: 4
       <strong>None (0px)</strong>
       <span style="font-size: 12px; color: #4E5968;">풀스크린 모달, 엣지 컨테이너</span>
     </div>
-
     <!-- Extra Small -->
     <div class="kb-shape-card">
       <div class="kb-shape-preview-box" style="border-radius: 4px;">
@@ -31,7 +29,6 @@ order: 4
       <strong>Extra Small (4px)</strong>
       <span style="font-size: 12px; color: #4E5968;">프로그레스 바, 인디케이터</span>
     </div>
-
     <!-- Small -->
     <div class="kb-shape-card">
       <div class="kb-shape-preview-box" style="border-radius: 8px;">
@@ -40,7 +37,6 @@ order: 4
       <strong>Small (8px)</strong>
       <span style="font-size: 12px; color: #4E5968;">칩(Chip), 툴팁, 배지</span>
     </div>
-
     <!-- Medium (Standard) -->
     <div class="kb-shape-card" style="border: 2px solid #FFE100;">
       <div class="kb-shape-preview-box" style="border-radius: 16px; background-color: #FFE100;">
@@ -49,7 +45,6 @@ order: 4
       <strong style="color: #191F28;">Medium (16px) ★표준</strong>
       <span style="font-size: 12px; color: #4E5968;">카카오뱅크 버튼, 인풋 텍스트 필드</span>
     </div>
-
     <!-- Large -->
     <div class="kb-shape-card">
       <div class="kb-shape-preview-box" style="border-radius: 20px;">
@@ -58,7 +53,6 @@ order: 4
       <strong>Large (20px)</strong>
       <span style="font-size: 12px; color: #4E5968;">입출금 통장 카드, 상품 안내 카드</span>
     </div>
-
     <!-- Extra Large -->
     <div class="kb-shape-card">
       <div class="kb-shape-preview-box" style="border-radius: 24px;">
@@ -67,7 +61,6 @@ order: 4
       <strong>Extra Large (24px)</strong>
       <span style="font-size: 12px; color: #4E5968;">바텀시트 상단, 팝업 다이얼로그</span>
     </div>
-
     <!-- Full -->
     <div class="kb-shape-card">
       <div class="kb-shape-preview-box" style="border-radius: 9999px;">
@@ -77,12 +70,10 @@ order: 4
       <span style="font-size: 12px; color: #4E5968;">원형 아바타, 플로팅 버튼(FAB)</span>
     </div>
   </div>
-
   <h3 style="margin-top: 36px;">2. 52px 모바일 최적 터치 타깃 직접 비교 (Touch Target Dimensions)</h3>
   <p class="kb-section-intro">
     금융 거래에서 실수 없는 정확한 터치(오작동 방지)를 위해 카카오뱅크는 버튼 높이를 <strong>52px</strong>, 곡률을 <strong>16px</strong>로 고정하여 구글 M3 기본 대비 30% 더 넓은 안정적 터치 면적을 제공합니다.
   </p>
-
   <div class="kb-touch-compare">
     <!-- KakaoBank 52px -->
     <div class="kb-touch-column recommended">
@@ -100,7 +91,6 @@ order: 4
         • <strong>터치 안정성:</strong> 오터치율 42% 감소
       </div>
     </div>
-
     <!-- Google Default 40px -->
     <div class="kb-touch-column">
       <span style="font-size: 12px; font-weight: 600; color: #76808E; background: #ECEEF0; padding: 4px 10px; border-radius: 9999px;">
@@ -118,12 +108,10 @@ order: 4
       </div>
     </div>
   </div>
-
   <h3 style="margin-top: 36px;">3. 부유 엘리베이션 및 그림자 (Elevation & Shadow)</h3>
   <p class="kb-section-intro">
     과도한 인위적 입체감을 배제하고, 자연광에 비춘 듯 부드러운 4단계 그림자 깊이를 적용합니다.
   </p>
-
   <div class="kb-elevation-grid">
     <div class="kb-elevation-card kb-elevation-0">
       <strong>Level 0 (Flat)</strong>

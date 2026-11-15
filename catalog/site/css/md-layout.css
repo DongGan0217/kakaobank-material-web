@@ -319,6 +319,19 @@ blockquote.warning a {
   background: var(--md-sys-color-surface-container-low, #f9fafb);
   border: 1px solid var(--md-sys-color-outline-variant, #e5e8eb);
   border-radius: 20px;
+  word-break: keep-all !important;
+  word-wrap: break-word !important;
+}
+
+.kb-color-card,
+.kb-shape-card,
+.kb-overview-card,
+.kb-type-scale-card,
+.kb-touch-column,
+.kb-icon-item,
+.kb-asset-card {
+  word-break: keep-all !important;
+  word-wrap: break-word !important;
 }
 
 .kb-section-intro {
@@ -727,7 +740,8 @@ blockquote.warning a {
 .kb-touch-compare > p,
 .kb-elevation-grid > p,
 .kb-type-scale-list > p,
-.kb-asset-grid > p {
+.kb-asset-grid > p,
+.kb-icon-grid > p {
   display: none !important;
   margin: 0 !important;
   padding: 0 !important;

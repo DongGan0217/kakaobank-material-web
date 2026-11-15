@@ -12,7 +12,6 @@ order: 3
   <div class="kb-section-intro">
     <strong>✨ 실시간 타이포그래피 인터랙티브 샌드박스:</strong> 아래 텍스트 입력창에 원하는 문구를 입력하면 15개 타입스케일의 실제 Pretendard Variable 렌더링 결과가 실시간으로 동기화됩니다.
   </div>
-
   <div class="kb-sandbox-input-box">
     <label for="kb-type-tester">미리보기 텍스트 입력:</label>
     <input 
@@ -24,7 +23,6 @@ order: 3
       oninput="document.querySelectorAll('.kb-type-target-text').forEach(el => el.innerText = this.value || '카카오뱅크 편리한 모바일 금융 1,234,567원')"
     />
   </div>
-
   <div class="kb-type-scale-list">
     <!-- Display Large -->
     <div class="kb-type-scale-card">
@@ -36,7 +34,6 @@ order: 3
         카카오뱅크 편리한 모바일 금융 1,234,567원
       </p>
     </div>
-
     <!-- Display Medium -->
     <div class="kb-type-scale-card">
       <div class="kb-type-meta">
@@ -47,7 +44,6 @@ order: 3
         카카오뱅크 편리한 모바일 금융 1,234,567원
       </p>
     </div>
-
     <!-- Display Small -->
     <div class="kb-type-scale-card">
       <div class="kb-type-meta">
@@ -58,7 +54,6 @@ order: 3
         카카오뱅크 편리한 모바일 금융 1,234,567원
       </p>
     </div>
-
     <!-- Headline Large -->
     <div class="kb-type-scale-card">
       <div class="kb-type-meta">
@@ -69,7 +64,6 @@ order: 3
         카카오뱅크 편리한 모바일 금융 1,234,567원
       </p>
     </div>
-
     <!-- Headline Medium -->
     <div class="kb-type-scale-card">
       <div class="kb-type-meta">
@@ -80,7 +74,6 @@ order: 3
         카카오뱅크 편리한 모바일 금융 1,234,567원
       </p>
     </div>
-
     <!-- Headline Small -->
     <div class="kb-type-scale-card">
       <div class="kb-type-meta">
@@ -91,7 +84,6 @@ order: 3
         카카오뱅크 편리한 모바일 금융 1,234,567원
       </p>
     </div>
-
     <!-- Title Large -->
     <div class="kb-type-scale-card">
       <div class="kb-type-meta">
@@ -102,7 +94,6 @@ order: 3
         카카오뱅크 편리한 모바일 금융 1,234,567원
       </p>
     </div>
-
     <!-- Title Medium -->
     <div class="kb-type-scale-card">
       <div class="kb-type-meta">
@@ -113,7 +104,6 @@ order: 3
         카카오뱅크 편리한 모바일 금융 1,234,567원
       </p>
     </div>
-
     <!-- Title Small -->
     <div class="kb-type-scale-card">
       <div class="kb-type-meta">
@@ -124,7 +114,6 @@ order: 3
         카카오뱅크 편리한 모바일 금융 1,234,567원
       </p>
     </div>
-
     <!-- Body Large -->
     <div class="kb-type-scale-card">
       <div class="kb-type-meta">
@@ -135,7 +124,6 @@ order: 3
         카카오뱅크 편리한 모바일 금융 1,234,567원
       </p>
     </div>
-
     <!-- Body Medium -->
     <div class="kb-type-scale-card">
       <div class="kb-type-meta">
@@ -146,7 +134,6 @@ order: 3
         카카오뱅크 편리한 모바일 금융 1,234,567원
       </p>
     </div>
-
     <!-- Body Small -->
     <div class="kb-type-scale-card">
       <div class="kb-type-meta">
@@ -157,7 +144,6 @@ order: 3
         카카오뱅크 편리한 모바일 금융 1,234,567원
       </p>
     </div>
-
     <!-- Label Large -->
     <div class="kb-type-scale-card">
       <div class="kb-type-meta">
@@ -168,7 +154,6 @@ order: 3
         카카오뱅크 편리한 모바일 금융 1,234,567원
       </p>
     </div>
-
     <!-- Label Medium -->
     <div class="kb-type-scale-card">
       <div class="kb-type-meta">
@@ -179,7 +164,6 @@ order: 3
         카카오뱅크 편리한 모바일 금융 1,234,567원
       </p>
     </div>
-
     <!-- Label Small -->
     <div class="kb-type-scale-card">
       <div class="kb-type-meta">

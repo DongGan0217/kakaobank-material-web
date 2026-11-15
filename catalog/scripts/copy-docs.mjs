@@ -168,4 +168,20 @@ await transformReadmes(themingFiles, '', [
   ['README', 'material-theming'],
 ]);
 await transformReadmes(assetsFiles);
+
+// Copy assets metadata and directory files
+try {
+  await cp(join('..', 'docs', 'assets', 'assets.json'), join('site', 'assets', 'assets.json'), {force: true});
+  console.log('Copied assets.json to site/assets/');
+} catch (e) {
+  console.warn('Could not copy assets.json:', e.message);
+}
+
+try {
+  await cp(join('..', 'docs', 'assets', 'image-catalog.json'), join('site', 'assets', 'image-catalog.json'), {force: true});
+  console.log('Copied image-catalog.json to site/assets/');
+} catch (e) {
+  console.warn('Could not copy image-catalog.json:', e.message);
+}
+
 console.log('Transformations complete!');

@@ -12,7 +12,6 @@ order: 2
   <div class="kb-section-intro">
     <strong>💡 시각적 가독성 인터랙션 가이드:</strong> 각 색상 카드의 <strong>[복사]</strong> 버튼을 누르면 클립보드에 HEX 코드가 즉시 복사되며, 우측 상단 뱃지에서 <strong>WCAG 2.1 대비율(AA / AAA)</strong>을 실시간 확인할 수 있습니다.
   </div>
-
   <h3 style="margin-top:0;">1. 브랜드 핵심 시스템 컬러 (Key Brand Colors)</h3>
   <div class="kb-color-swatch-grid">
     <!-- Primary -->
@@ -29,7 +28,6 @@ order: 2
         </div>
       </div>
     </div>
-
     <!-- On Primary -->
     <div class="kb-color-card">
       <div class="kb-swatch-chip" style="background-color: #191F28; color: #FFFFFF;">
@@ -44,7 +42,6 @@ order: 2
         </div>
       </div>
     </div>
-
     <!-- Primary Container -->
     <div class="kb-color-card">
       <div class="kb-swatch-chip" style="background-color: #FFF6A6; color: #191F28;">
@@ -59,7 +56,6 @@ order: 2
         </div>
       </div>
     </div>
-
     <!-- Secondary -->
     <div class="kb-color-card">
       <div class="kb-swatch-chip" style="background-color: #333D4B; color: #FFFFFF;">
@@ -74,7 +70,6 @@ order: 2
         </div>
       </div>
     </div>
-
     <!-- Surface -->
     <div class="kb-color-card">
       <div class="kb-swatch-chip" style="background-color: #FFFFFF; border-bottom: 1px solid #E5E8EB; color: #191F28;">
@@ -89,7 +84,6 @@ order: 2
         </div>
       </div>
     </div>
-
     <!-- Surface Container -->
     <div class="kb-color-card">
       <div class="kb-swatch-chip" style="background-color: #F9FAFB; border-bottom: 1px solid #E5E8EB; color: #191F28;">
@@ -104,7 +98,6 @@ order: 2
         </div>
       </div>
     </div>
-
     <!-- Outline -->
     <div class="kb-color-card">
       <div class="kb-swatch-chip" style="background-color: #E5E8EB; color: #191F28;">
@@ -119,7 +112,6 @@ order: 2
         </div>
       </div>
     </div>
-
     <!-- Tertiary Accent -->
     <div class="kb-color-card">
       <div class="kb-swatch-chip" style="background-color: #3182F6; color: #FFFFFF;">
@@ -135,7 +127,6 @@ order: 2
       </div>
     </div>
   </div>
-
   <h3 style="margin-top:32px;">2. 금융 시맨틱 컬러 (Financial Semantics)</h3>
   <div class="kb-color-swatch-grid">
     <!-- Financial Income -->
@@ -152,7 +143,6 @@ order: 2
         </div>
       </div>
     </div>
-
     <!-- Financial Expense -->
     <div class="kb-color-card">
       <div class="kb-swatch-chip" style="background-color: #F04452; color: #FFFFFF;">
@@ -167,7 +157,6 @@ order: 2
         </div>
       </div>
     </div>
-
     <!-- Financial Profit -->
     <div class="kb-color-card">
       <div class="kb-swatch-chip" style="background-color: #04C09E; color: #FFFFFF;">
@@ -182,7 +171,6 @@ order: 2
         </div>
       </div>
     </div>
-
     <!-- Financial Warning -->
     <div class="kb-color-card">
       <div class="kb-swatch-chip" style="background-color: #FB8C00; color: #FFFFFF;">
