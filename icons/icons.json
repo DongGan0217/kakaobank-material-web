@@ -1,0 +1,842 @@
+[
+  {
+    "name": "kb_ic-arrow-left",
+    "type": "svg",
+    "file": "svg/kb_ic-arrow-left.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-arrow-right-white",
+    "type": "svg",
+    "file": "svg/kb_ic-arrow-right-white.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-arrow-right",
+    "type": "svg",
+    "file": "svg/kb_ic-arrow-right.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-arrow-up",
+    "type": "svg",
+    "file": "svg/kb_ic-arrow-up.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-call",
+    "type": "svg",
+    "file": "svg/kb_ic-call.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-chevron-left",
+    "type": "svg",
+    "file": "svg/kb_ic-chevron-left.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-chevron-right-mo",
+    "type": "svg",
+    "file": "svg/kb_ic-chevron-right-mo.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-chevron-right",
+    "type": "svg",
+    "file": "svg/kb_ic-chevron-right.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-circle-outlink-b-sm",
+    "type": "svg",
+    "file": "svg/kb_ic-circle-outlink-b-sm.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-circle-outlink-b",
+    "type": "svg",
+    "file": "svg/kb_ic-circle-outlink-b.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-circle-outlink-w",
+    "type": "svg",
+    "file": "svg/kb_ic-circle-outlink-w.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-close-up",
+    "type": "svg",
+    "file": "svg/kb_ic-close-up.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-close",
+    "type": "svg",
+    "file": "svg/kb_ic-close.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-download-m",
+    "type": "svg",
+    "file": "svg/kb_ic-download-m.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-download-s",
+    "type": "svg",
+    "file": "svg/kb_ic-download-s.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-en",
+    "type": "svg",
+    "file": "svg/kb_ic-en.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-headphone",
+    "type": "svg",
+    "file": "svg/kb_ic-headphone.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-kr",
+    "type": "svg",
+    "file": "svg/kb_ic-kr.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-lg-check",
+    "type": "svg",
+    "file": "svg/kb_ic-lg-check.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-lg-copy",
+    "type": "svg",
+    "file": "svg/kb_ic-lg-copy.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-lg-filter",
+    "type": "svg",
+    "file": "svg/kb_ic-lg-filter.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-lg-kakaotalk",
+    "type": "svg",
+    "file": "svg/kb_ic-lg-kakaotalk.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-lg-list",
+    "type": "svg",
+    "file": "svg/kb_ic-lg-list.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-lg-outlink-white",
+    "type": "svg",
+    "file": "svg/kb_ic-lg-outlink-white.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-lg-outlink",
+    "type": "svg",
+    "file": "svg/kb_ic-lg-outlink.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-lg-pause",
+    "type": "svg",
+    "file": "svg/kb_ic-lg-pause.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-lg-play",
+    "type": "svg",
+    "file": "svg/kb_ic-lg-play.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-lg-search",
+    "type": "svg",
+    "file": "svg/kb_ic-lg-search.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-lg-three-dots",
+    "type": "svg",
+    "file": "svg/kb_ic-lg-three-dots.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-link-arrow-right-black",
+    "type": "svg",
+    "file": "svg/kb_ic-link-arrow-right-black.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-link-arrow-right-white",
+    "type": "svg",
+    "file": "svg/kb_ic-link-arrow-right-white.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-md-ban",
+    "type": "svg",
+    "file": "svg/kb_ic-md-ban.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-md-check",
+    "type": "svg",
+    "file": "svg/kb_ic-md-check.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-md-delete",
+    "type": "svg",
+    "file": "svg/kb_ic-md-delete.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-md-headphone",
+    "type": "svg",
+    "file": "svg/kb_ic-md-headphone.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-md-kakaotalk",
+    "type": "svg",
+    "file": "svg/kb_ic-md-kakaotalk.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-menu",
+    "type": "svg",
+    "file": "svg/kb_ic-menu.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-minus",
+    "type": "svg",
+    "file": "svg/kb_ic-minus.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-open-down",
+    "type": "svg",
+    "file": "svg/kb_ic-open-down.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-plus",
+    "type": "svg",
+    "file": "svg/kb_ic-plus.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-scroll-down",
+    "type": "svg",
+    "file": "svg/kb_ic-scroll-down.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-sm-ban",
+    "type": "svg",
+    "file": "svg/kb_ic-sm-ban.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-sm-chevron",
+    "type": "svg",
+    "file": "svg/kb_ic-sm-chevron.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-sm-close-up",
+    "type": "svg",
+    "file": "svg/kb_ic-sm-close-up.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-sm-open-down",
+    "type": "svg",
+    "file": "svg/kb_ic-sm-open-down.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-sm-outlink",
+    "type": "svg",
+    "file": "svg/kb_ic-sm-outlink.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-video-pause",
+    "type": "svg",
+    "file": "svg/kb_ic-video-pause.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_ic-video-play",
+    "type": "svg",
+    "file": "svg/kb_ic-video-play.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_logo-gnb-m",
+    "type": "svg",
+    "file": "svg/kb_logo-gnb-m.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "web_inline_050",
+    "type": "svg",
+    "file": "svg/web_inline_050.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "web_inline_051",
+    "type": "svg",
+    "file": "svg/web_inline_051.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "web_inline_052",
+    "type": "svg",
+    "file": "svg/web_inline_052.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "web_inline_053",
+    "type": "svg",
+    "file": "svg/web_inline_053.svg",
+    "category": "web-svg"
+  },
+  {
+    "name": "kb_abc_ic_commit_search_api_mtrl_alpha",
+    "type": "png",
+    "file": "png/kb_abc_ic_commit_search_api_mtrl_alpha.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_adfit_icon_ad_info",
+    "type": "png",
+    "file": "png/kb_adfit_icon_ad_info.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_gfp__ad__fullscreen_video_icon_loading",
+    "type": "png",
+    "file": "png/kb_gfp__ad__fullscreen_video_icon_loading.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_gfp__ad__icon_arrow_landing_dark",
+    "type": "png",
+    "file": "png/kb_gfp__ad__icon_arrow_landing_dark.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_gfp__ad__icon_arrow_landing_light",
+    "type": "png",
+    "file": "png/kb_gfp__ad__icon_arrow_landing_light.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_gfp__ad__icon_delivery_fee",
+    "type": "png",
+    "file": "png/kb_gfp__ad__icon_delivery_fee.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_gfp__ad__icon_more_image",
+    "type": "png",
+    "file": "png/kb_gfp__ad__icon_more_image.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_gfp__ad__icon_more_image_small",
+    "type": "png",
+    "file": "png/kb_gfp__ad__icon_more_image_small.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_gfp__ad__icon_privacy_beside_text",
+    "type": "png",
+    "file": "png/kb_gfp__ad__icon_privacy_beside_text.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_gfp__ad__icon_privacy_dark",
+    "type": "png",
+    "file": "png/kb_gfp__ad__icon_privacy_dark.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_gfp__ad__icon_privacy_light",
+    "type": "png",
+    "file": "png/kb_gfp__ad__icon_privacy_light.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_account",
+    "type": "webp",
+    "file": "png/kb_ic_account.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_arrow_20",
+    "type": "webp",
+    "file": "png/kb_ic_arrow_20.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_arrow_20_thin",
+    "type": "webp",
+    "file": "png/kb_ic_arrow_20_thin.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_arrow_expand_32",
+    "type": "webp",
+    "file": "png/kb_ic_arrow_expand_32.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_arrow_fold_32",
+    "type": "webp",
+    "file": "png/kb_ic_arrow_fold_32.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_benefit",
+    "type": "webp",
+    "file": "png/kb_ic_benefit.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_close_btn",
+    "type": "png",
+    "file": "png/kb_ic_close_btn.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_coin",
+    "type": "webp",
+    "file": "png/kb_ic_coin.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_coupon",
+    "type": "webp",
+    "file": "png/kb_ic_coupon.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_launcher",
+    "type": "webp",
+    "file": "png/kb_ic_launcher.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_launcher_round",
+    "type": "webp",
+    "file": "png/kb_ic_launcher_round.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_more_dark",
+    "type": "webp",
+    "file": "png/kb_ic_more_dark.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_more_light",
+    "type": "webp",
+    "file": "png/kb_ic_more_light.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_reorder",
+    "type": "webp",
+    "file": "png/kb_ic_reorder.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_result_page_fallback_critical",
+    "type": "webp",
+    "file": "png/kb_ic_result_page_fallback_critical.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_result_page_fallback_pending",
+    "type": "webp",
+    "file": "png/kb_ic_result_page_fallback_pending.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_result_page_fallback_success",
+    "type": "webp",
+    "file": "png/kb_ic_result_page_fallback_success.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_setting_dark",
+    "type": "webp",
+    "file": "png/kb_ic_setting_dark.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_setting_light",
+    "type": "webp",
+    "file": "png/kb_ic_setting_light.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_share_etc",
+    "type": "webp",
+    "file": "png/kb_ic_share_etc.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_share_instagram",
+    "type": "webp",
+    "file": "png/kb_ic_share_instagram.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_share_kakao",
+    "type": "webp",
+    "file": "png/kb_ic_share_kakao.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_solid_heart_white_border",
+    "type": "webp",
+    "file": "png/kb_ic_solid_heart_white_border.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_stamp_badge",
+    "type": "webp",
+    "file": "png/kb_ic_stamp_badge.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_star",
+    "type": "webp",
+    "file": "png/kb_ic_star.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_ic_status_bar",
+    "type": "webp",
+    "file": "png/kb_ic_status_bar.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_icon_30_alarm_warning",
+    "type": "webp",
+    "file": "png/kb_icon_30_alarm_warning.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_icon_48_alarm_notice",
+    "type": "webp",
+    "file": "png/kb_icon_48_alarm_notice.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_icon_48_star",
+    "type": "webp",
+    "file": "png/kb_icon_48_star.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_icon_empty",
+    "type": "webp",
+    "file": "png/kb_icon_empty.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_icon_faceotp",
+    "type": "webp",
+    "file": "png/kb_icon_faceotp.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_icon_guide_circle_01",
+    "type": "webp",
+    "file": "png/kb_icon_guide_circle_01.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_icon_guide_circle_02",
+    "type": "webp",
+    "file": "png/kb_icon_guide_circle_02.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_icon_guide_circle_03",
+    "type": "webp",
+    "file": "png/kb_icon_guide_circle_03.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_icon_guide_circle_04",
+    "type": "webp",
+    "file": "png/kb_icon_guide_circle_04.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_icon_loan",
+    "type": "webp",
+    "file": "png/kb_icon_loan.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_icon_loan_list_01",
+    "type": "webp",
+    "file": "png/kb_icon_loan_list_01.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_icon_loan_list_02",
+    "type": "webp",
+    "file": "png/kb_icon_loan_list_02.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_icon_otp",
+    "type": "webp",
+    "file": "png/kb_icon_otp.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_icon_rules_setting",
+    "type": "webp",
+    "file": "png/kb_icon_rules_setting.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_igaw_ssp_ic_checkbox_off",
+    "type": "png",
+    "file": "png/kb_igaw_ssp_ic_checkbox_off.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_igaw_ssp_ic_checkbox_on",
+    "type": "png",
+    "file": "png/kb_igaw_ssp_ic_checkbox_on.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_img_mini_savings_basic_open",
+    "type": "webp",
+    "file": "png/kb_img_mini_savings_basic_open.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_img_newkbca_lv3_icon_1",
+    "type": "webp",
+    "file": "png/kb_img_newkbca_lv3_icon_1.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_img_newkbca_lv3_icon_3",
+    "type": "webp",
+    "file": "png/kb_img_newkbca_lv3_icon_3.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_mobile_id_foreign_domestic_residence_masking_0",
+    "type": "webp",
+    "file": "png/kb_mobile_id_foreign_domestic_residence_masking_0.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_mobile_id_foreign_domestic_residence_masking_1",
+    "type": "webp",
+    "file": "png/kb_mobile_id_foreign_domestic_residence_masking_1.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_mobile_id_foreign_domestic_residence_masking_2",
+    "type": "webp",
+    "file": "png/kb_mobile_id_foreign_domestic_residence_masking_2.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_mobile_id_foreign_domestic_residence_masking_3",
+    "type": "webp",
+    "file": "png/kb_mobile_id_foreign_domestic_residence_masking_3.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_mobile_id_foreign_domestic_residence_masking_4",
+    "type": "webp",
+    "file": "png/kb_mobile_id_foreign_domestic_residence_masking_4.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_mobile_id_foreign_domestic_resident_type_title",
+    "type": "webp",
+    "file": "png/kb_mobile_id_foreign_domestic_resident_type_title.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_m_icon_draw",
+    "type": "png",
+    "file": "png/kb_rsup_m_icon_draw.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_m_icon_draw_disable",
+    "type": "png",
+    "file": "png/kb_rsup_m_icon_draw_disable.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_m_icon_draw_off",
+    "type": "png",
+    "file": "png/kb_rsup_m_icon_draw_off.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_m_icon_draw_off_disable",
+    "type": "png",
+    "file": "png/kb_rsup_m_icon_draw_off_disable.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_m_icon_draw_off_press",
+    "type": "png",
+    "file": "png/kb_rsup_m_icon_draw_off_press.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_m_icon_draw_press",
+    "type": "png",
+    "file": "png/kb_rsup_m_icon_draw_press.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_m_icon_eraser",
+    "type": "png",
+    "file": "png/kb_rsup_m_icon_eraser.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_m_icon_eraser_disable",
+    "type": "png",
+    "file": "png/kb_rsup_m_icon_eraser_disable.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_m_icon_eraser_press",
+    "type": "png",
+    "file": "png/kb_rsup_m_icon_eraser_press.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_nftf_m_icon_close",
+    "type": "png",
+    "file": "png/kb_rsup_nftf_m_icon_close.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_nftf_m_icon_close_press",
+    "type": "png",
+    "file": "png/kb_rsup_nftf_m_icon_close_press.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_nftf_m_icon_flash_off",
+    "type": "png",
+    "file": "png/kb_rsup_nftf_m_icon_flash_off.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_nftf_m_icon_flash_off_disable",
+    "type": "png",
+    "file": "png/kb_rsup_nftf_m_icon_flash_off_disable.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_nftf_m_icon_flash_off_press",
+    "type": "png",
+    "file": "png/kb_rsup_nftf_m_icon_flash_off_press.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_nftf_m_icon_flash_on",
+    "type": "png",
+    "file": "png/kb_rsup_nftf_m_icon_flash_on.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_nftf_m_icon_large_record",
+    "type": "png",
+    "file": "png/kb_rsup_nftf_m_icon_large_record.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_nftf_m_icon_large_record_press",
+    "type": "png",
+    "file": "png/kb_rsup_nftf_m_icon_large_record_press.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_nftf_m_icon_large_stop",
+    "type": "png",
+    "file": "png/kb_rsup_nftf_m_icon_large_stop.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_nftf_m_icon_large_stop_press",
+    "type": "png",
+    "file": "png/kb_rsup_nftf_m_icon_large_stop_press.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_nftf_m_icon_recording",
+    "type": "png",
+    "file": "png/kb_rsup_nftf_m_icon_recording.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_nftf_m_icon_turn",
+    "type": "png",
+    "file": "png/kb_rsup_nftf_m_icon_turn.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_nftf_m_icon_turn_dis",
+    "type": "png",
+    "file": "png/kb_rsup_nftf_m_icon_turn_dis.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_rsup_nftf_m_icon_turn_press",
+    "type": "png",
+    "file": "png/kb_rsup_nftf_m_icon_turn_press.png",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_stalk_icon_default",
+    "type": "webp",
+    "file": "png/kb_stalk_icon_default.webp",
+    "category": "mobile-app"
+  },
+  {
+    "name": "kb_stalk_icon_default_dark",
+    "type": "webp",
+    "file": "png/kb_stalk_icon_default_dark.webp",
+    "category": "mobile-app"
+  }
+]
