@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import {cp, readFile, writeFile} from 'fs/promises';
+import {cp, readFile, writeFile, symlink, lstat, unlink} from 'fs/promises';
 import {dirname, join, relative} from 'path';
 import tinyGlob from 'tiny-glob';
 
@@ -182,6 +182,22 @@ try {
   console.log('Copied image-catalog.json to site/assets/');
 } catch (e) {
   console.warn('Could not copy image-catalog.json:', e.message);
+}
+
+// Ensure webp symlink in site/images/kb-assets/webp
+try {
+  const target = '../../../../../kakaobank-apk/extracted_assets';
+  const linkPath = join('site', 'images', 'kb-assets', 'webp');
+  try {
+    const stat = await lstat(linkPath);
+    if (stat.isSymbolicLink()) {
+      await unlink(linkPath);
+    }
+  } catch {}
+  await symlink(target, linkPath);
+  console.log('Ensured webp symlink in site/images/kb-assets/webp');
+} catch (e) {
+  console.warn('Could not ensure webp symlink:', e.message);
 }
 
 console.log('Transformations complete!');

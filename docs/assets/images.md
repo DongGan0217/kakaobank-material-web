@@ -33,12 +33,12 @@ tags: [asset]
   <!-- Toolbar: Tabs & Search -->
   <div class="kb-asset-toolbar">
     <div class="kb-asset-tabs" id="kb-category-tabs">
-      <button type="button" class="kb-tab-btn active" data-cat="all" onclick="filterCategory('all', this)">전체 (All)</button>
-      <button type="button" class="kb-tab-btn" data-cat="hero" onclick="filterCategory('hero', this)">🎨 히어로 배너 (20)</button>
+      <button type="button" class="kb-tab-btn active" data-cat="all" onclick="filterCategory('all', this)">전체 (880+)</button>
+      <button type="button" class="kb-tab-btn" data-cat="hero_banner" onclick="filterCategory('hero_banner', this)">🎨 컴포넌트 배너 (20)</button>
+      <button type="button" class="kb-tab-btn" data-cat="banking_card" onclick="filterCategory('banking_card', this)">💳 금융 & 카드 (850+)</button>
       <button type="button" class="kb-tab-btn" data-cat="illust" onclick="filterCategory('illust', this)">✨ 일러스트 & 캐릭터</button>
-      <button type="button" class="kb-tab-btn" data-cat="anim" onclick="filterCategory('anim', this)">🎬 애니메이션</button>
-      <button type="button" class="kb-tab-btn" data-cat="card" onclick="filterCategory('card', this)">💳 카드 & 금융</button>
-      <button type="button" class="kb-tab-btn" data-cat="badge" onclick="filterCategory('badge', this)">🏷️ 뱃지 & UI</button>
+      <button type="button" class="kb-tab-btn" data-cat="anim" onclick="filterCategory('anim', this)">🎬 모션 & 애니메이션</button>
+      <button type="button" class="kb-tab-btn" data-cat="general_ui" onclick="filterCategory('general_ui', this)">🏷️ UI & 에셋</button>
     </div>
 
     <input 
@@ -74,6 +74,11 @@ tags: [asset]
     <div class="kb-lightbox-details">
       <div class="kb-lightbox-title" id="kb-lightbox-title">Asset Title</div>
       <div class="kb-lightbox-path" id="kb-lightbox-path">/images/kb-assets/...</div>
+      <div id="kb-lightbox-ai-info" style="margin-block: 10px; font-size: 13px; color: #4e5968; background: var(--md-sys-color-surface-container, #f2f4f6); padding: 10px 14px; border-radius: 10px; text-align: left; line-height: 1.6;">
+        <div><strong>🤖 AI 추천 의도(Intent):</strong> <span id="kb-lightbox-intent" style="color: #2563eb; font-weight: 600;">-</span></div>
+        <div><strong>🧩 권장 컴포넌트:</strong> <code id="kb-lightbox-comp" style="background: rgba(0,0,0,0.06); padding: 2px 6px; border-radius: 4px;">-</code></div>
+        <div><strong>📝 의미 설명:</strong> <span id="kb-lightbox-desc">-</span></div>
+      </div>
       <div class="kb-lightbox-buttons">
         <button type="button" class="kb-lightbox-btn btn-primary-yellow" onclick="copyAssetPath()">경로 복사 (Copy Path)</button>
         <button type="button" class="kb-lightbox-btn btn-secondary-dark" onclick="copyAssetTag()">HTML &lt;img&gt; 복사</button>
@@ -120,10 +125,15 @@ tags: [asset]
 
   function applyFilters() {
     filteredAssets = allAssets.filter(item => {
-      const matchesCat = (currentCategory === 'all') || (item.category === currentCategory);
+      const matchesCat = (currentCategory === 'all') || 
+        (item.category === currentCategory) || 
+        (item.domain === currentCategory);
       const matchesQuery = !searchQuery || 
         item.name.toLowerCase().includes(searchQuery) || 
         item.filename.toLowerCase().includes(searchQuery) ||
+        (item.description && item.description.toLowerCase().includes(searchQuery)) ||
+        (item.intent && item.intent.toLowerCase().includes(searchQuery)) ||
+        (item.domainName && item.domainName.toLowerCase().includes(searchQuery)) ||
         (item.tags && item.tags.some(t => t.toLowerCase().includes(searchQuery)));
       return matchesCat && matchesQuery;
     });
@@ -228,6 +238,9 @@ tags: [asset]
     document.getElementById('kb-lightbox-img').src = item.url;
     document.getElementById('kb-lightbox-title').innerText = item.name;
     document.getElementById('kb-lightbox-path').innerText = item.url;
+    document.getElementById('kb-lightbox-intent').innerText = item.intent || item.category || '-';
+    document.getElementById('kb-lightbox-comp').innerText = item.suggestedComponent || '<md-card>, <img>';
+    document.getElementById('kb-lightbox-desc').innerText = item.description || item.name;
     document.getElementById('kb-lightbox-modal').classList.add('open');
   };
 
