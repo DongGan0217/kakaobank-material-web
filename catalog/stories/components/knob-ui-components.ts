@@ -30,11 +30,11 @@ export function boolInput(): KnobUi<boolean> {
       };
 
       return html`
-        <div>
-          <label>
+        <div style="padding: 4px 0;">
+          <label style="display: flex; align-items: center; font-family: 'Pretendard Variable', Pretendard, sans-serif; font-size: 13px; font-weight: 500; color: #191F28; cursor: pointer;">
             <md-checkbox
               touch-target="none"
-              style="margin-inline-end: 16px;"
+              style="margin-inline-end: 12px;"
               .checked=${!!knob.latestValue}
               @change="${valueChanged}"
             >
@@ -225,8 +225,8 @@ export function colorPicker(opts?: ColorPickerOpts): KnobUi<string> {
         onChange((e.target as KnobColorSelector).value);
       };
       return html`
-        <div>
-          <label>
+        <div style="padding: 4px 0;">
+          <label style="display: flex; align-items: center; font-family: 'Pretendard Variable', Pretendard, sans-serif; font-size: 13px; font-weight: 500; color: #191F28; cursor: pointer;">
             <knob-color-selector
               .value="${knob.latestValue ?? ''}"
               .hasAlpha="${config.hasAlpha}"
@@ -245,13 +245,16 @@ interface TextInputOptions<T> {
 }
 
 const sharedTextFieldStyles: StyleInfo = {
-  'margin-inline-end': '16px',
-  '--md-filled-field-leading-space': '8px',
-  '--md-filled-field-trailing-space': '8px',
-  '--md-filled-field-top-space': '4px',
-  '--md-filled-field-bottom-space': '4px',
-  width: '150px',
-  'min-width': '150px',
+  'margin-inline-end': '12px',
+  '--md-filled-field-leading-space': '12px',
+  '--md-filled-field-trailing-space': '12px',
+  '--md-filled-field-top-space': '6px',
+  '--md-filled-field-bottom-space': '6px',
+  '--md-filled-field-container-shape': '8px',
+  'font-family': 'Pretendard Variable, Pretendard, sans-serif',
+  'font-size': '13px',
+  width: '140px',
+  'min-width': '140px',
 };
 
 /**
@@ -272,8 +275,8 @@ export function textInput<T>(options?: TextInputOptions<T>): KnobUi<T> {
         }
       };
       return html`
-        <div>
-          <label>
+        <div style="padding: 4px 0;">
+          <label style="display: flex; align-items: center; font-family: 'Pretendard Variable', Pretendard, sans-serif; font-size: 13px; font-weight: 500; color: #191F28;">
             <md-filled-text-field
               style=${styleMap(sharedTextFieldStyles)}
               .value="${(knob.latestValue ?? '') as unknown as string}"
@@ -312,8 +315,8 @@ export function numberInput(opts?: NumberInputOpts): KnobUi<number> {
         onChange(Number(rawVal));
       };
       return html`
-        <div>
-          <label>
+        <div style="padding: 4px 0;">
+          <label style="display: flex; align-items: center; font-family: 'Pretendard Variable', Pretendard, sans-serif; font-size: 13px; font-weight: 500; color: #191F28;">
             <md-filled-text-field
               style=${styleMap(sharedTextFieldStyles)}
               type="number"
@@ -370,7 +373,7 @@ export function radioSelector<T extends string>({
       };
       const radioOptions = options.map((option, index) => {
         const value: string = option.value;
-        return html` <label>
+        return html` <label style="display: inline-flex; align-items: center; margin-inline-end: 12px; font-family: 'Pretendard Variable', Pretendard, sans-serif; font-size: 13px; font-weight: 500; color: #191F28; cursor: pointer;">
           <md-radio
             name="${name}"
             value="${value}"
@@ -380,7 +383,7 @@ export function radioSelector<T extends string>({
           ${option.label}
         </label>`;
       });
-      return html` <div>${radioOptions}</div> `;
+      return html` <div style="padding: 4px 0;">${radioOptions}</div> `;
     },
   };
 }
@@ -406,20 +409,22 @@ export function selectDropdown<T extends string>({
           ?selected="${knob.latestValue === option.value}"
           .value="${option.value}"
         >
-          <div slot="headline">${option.label}</div>
+          <div slot="headline" style="font-family: 'Pretendard Variable', Pretendard, sans-serif; font-size: 13px;">${option.label}</div>
         </md-select-option>`;
       });
       return html`
-        <label>
-          <md-filled-select
-            @change="${valueChanged}"
-            menu-positioning="fixed"
-            style=${styleMap(sharedTextFieldStyles)}
-          >
-            ${listItems}
-          </md-filled-select>
-          ${knob.name}
-        </label>
+        <div style="padding: 4px 0;">
+          <label style="display: flex; align-items: center; font-family: 'Pretendard Variable', Pretendard, sans-serif; font-size: 13px; font-weight: 500; color: #191F28;">
+            <md-filled-select
+              @change="${valueChanged}"
+              menu-positioning="fixed"
+              style=${styleMap(sharedTextFieldStyles)}
+            >
+              ${listItems}
+            </md-filled-select>
+            ${knob.name}
+          </label>
+        </div>
       `;
     },
   };

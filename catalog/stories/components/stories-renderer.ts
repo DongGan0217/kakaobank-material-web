@@ -55,6 +55,15 @@ export class StoriesRenderer extends LitElement {
         display: flex;
         align-items: center;
       }
+
+      .kb-story-title {
+        font-family: 'Pretendard Variable', Pretendard, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: #191F28;
+        letter-spacing: -0.02em;
+        margin: 16px 0 8px;
+      }
     `,
   ];
 
@@ -97,7 +106,7 @@ export class StoriesRenderer extends LitElement {
           ? html`<small>${story.description}</small>`
           : '';
         label = html`
-          <h3 class="m-headline5">${story.name}</h3>
+          <h3 class="kb-story-title">${story.name}</h3>
           ${description}
         `;
       }

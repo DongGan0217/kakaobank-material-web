@@ -60,9 +60,9 @@ export class DragPlayground extends LitElement {
 
     #drag-bar {
       touch-action: none;
-      background-color: var(--md-sys-color-surface-container);
-      color: var(--md-sys-color-on-surface);
-      border: var(--_drag-bar-border-width) solid var(--md-sys-color-outline);
+      background-color: var(--md-sys-color-surface-container-high, #F8F9FA);
+      color: var(--md-sys-color-on-surface, #191F28);
+      border: var(--_drag-bar-border-width) solid var(--md-sys-color-outline-variant, #E5E8EB);
       border-radius: 12px;
       height: var(--_drag-bar-height);
       display: flex;
@@ -70,17 +70,23 @@ export class DragPlayground extends LitElement {
       align-items: center;
       -webkit-user-select: none;
       user-select: none;
+      transition: background-color 0.15s ease, border-color 0.15s ease;
     }
 
     #drag-bar:hover {
-      background-color: var(--md-sys-color-surface-container-high);
+      background-color: #FFE100;
+      border-color: #FFE100;
+      color: #191F28;
       cursor: grab;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     }
 
     #drag-bar.isDragging {
-      background-color: var(--md-sys-color-inverse-surface);
-      color: var(--md-sys-color-inverse-on-surface);
+      background-color: #FFE100;
+      border-color: #FFE100;
+      color: #191F28;
       cursor: grabbing;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     }
   `;
 

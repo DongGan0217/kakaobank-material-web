@@ -110,7 +110,7 @@ export class StoryKnobPanel extends LitElement {
         ${dragBar}
         <div class="content">
           <div id="title">
-            <h3 class="m-headline5">Knobs</h3>
+            <h3 class="kb-knob-title">옵션 제어 (Knobs)</h3>
             ${dragIcon} ${closeIcon}
           </div>
           <div id="knobs">
@@ -218,12 +218,11 @@ export class StoryKnobPanel extends LitElement {
     css`
       :host {
         max-width: 320px;
-        margin-left: 56px;
+        margin-left: 24px;
         padding: 0 16px;
-        background-color: white;
-        --mdc-typography-headline-color: black;
-        background-color: var(--md-sys-color-surface-container);
-        color: var(--md-sys-color-on-surface);
+        background-color: var(--md-sys-color-surface, #FFFFFF);
+        color: var(--md-sys-color-on-surface, #191F28);
+        font-family: 'Pretendard Variable', Pretendard, sans-serif;
         --md-elevation-level: 1;
         position: relative;
       }
@@ -260,16 +259,17 @@ export class StoryKnobPanel extends LitElement {
       }
 
       :host([draggable]) {
-        background-color: var(--md-sys-color-surface-container-high);
-        color: var(--md-sys-color-on-surface);
+        background-color: #FFFFFF;
+        color: #191F28;
         --md-elevation-level: 2;
         position: fixed;
         margin: 0;
         padding: 0;
-        border-radius: 4px;
-        border: none;
-        top: 8px;
-        right: 8px;
+        border-radius: 16px;
+        border: 1px solid var(--md-sys-color-outline-variant, #E5E8EB);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+        top: 16px;
+        right: 16px;
         bottom: unset;
         z-index: 7;
         opacity: 1;
@@ -294,11 +294,11 @@ export class StoryKnobPanel extends LitElement {
       }
 
       .dragBar {
-        height: 24px;
+        height: 28px;
         padding: 4px 0;
         border-bottom: 1px solid var(--md-sys-color-outline-variant, #E5E8EB);
         background-color: var(--md-sys-color-surface-container-high, #F8F9FA);
-        color: var(--md-sys-color-on-surface-variant, #4E5968);
+        color: #8B95A1;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -323,7 +323,7 @@ export class StoryKnobPanel extends LitElement {
       }
 
       ::slotted(*) {
-        min-height: 40px;
+        min-height: 44px;
         display: flex;
         align-items: center;
         --mdc-theme-primary: #FFE100;
@@ -333,14 +333,28 @@ export class StoryKnobPanel extends LitElement {
       #title {
         display: flex;
         align-items: center;
+        padding: 12px 0 8px 0;
+        border-bottom: 1px solid var(--md-sys-color-outline-variant, #E5E8EB);
+        margin-bottom: 8px;
       }
 
-      #title h3 {
+      .kb-knob-title {
+        font-size: 15px;
+        font-weight: 700;
+        color: #191F28;
+        letter-spacing: -0.02em;
+        margin: 0;
         flex-grow: 1;
       }
 
+      #knobs {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
       mwc-icon-button {
-        color: hsl(0, 0%, 50%);
+        color: #6B7684;
       }
     `,
   ];
