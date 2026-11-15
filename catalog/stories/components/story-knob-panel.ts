@@ -296,9 +296,9 @@ export class StoryKnobPanel extends LitElement {
       .dragBar {
         height: 24px;
         padding: 4px 0;
-        border-bottom: 1px solid var(--md-sys-color-outline-variant);
-        background-color: var(--md-sys-color-surface-variant);
-        color: var(--md-sys-color-on-surface-variant);
+        border-bottom: 1px solid var(--md-sys-color-outline-variant, #E5E8EB);
+        background-color: var(--md-sys-color-surface-container-high, #F8F9FA);
+        color: var(--md-sys-color-on-surface-variant, #4E5968);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -326,8 +326,8 @@ export class StoryKnobPanel extends LitElement {
         min-height: 40px;
         display: flex;
         align-items: center;
-        --mdc-theme-primary: hsl(199, 18%, 40%);
-        --mdc-theme-secondary: hsl(199, 18%, 40%);
+        --mdc-theme-primary: #FFE100;
+        --mdc-theme-secondary: #191F28;
       }
 
       #title {

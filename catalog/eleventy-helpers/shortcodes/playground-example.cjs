@@ -45,30 +45,47 @@ function playgroundExample(eleventyConfig) {
       : 'height: 500px;';
 
     return `
-      <details>
-        <summary>
-          <md-outlined-icon-button toggle tabindex="-1" aria-hidden="true">
-            <md-icon aria-hidden="true">expand_more</md-icon>
-            <md-icon aria-hidden="true" slot="selected">expand_less</md-icon>
-          </md-outlined-icon-button>
-          View interactive demo inline.
-        </summary>
-        <lit-island on:visible import="/js/hydration-entrypoints/playground-elements.js" class="example" aria-hidden="true">
-          <playground-project
-              id="${id}" project-src="/assets/stories/${dirname}/project.json">
-          <playground-preview
-              style="${previewHeight}"
-              project="${id}"
-          ><md-circular-progress indeterminate></md-circular-progress></playground-preview>
-          <playground-file-editor
-            style="${editorHeight}"
-            project="${id}"
-            filename="stories.ts"
-            line-numbers
-          ><md-circular-progress indeterminate></md-circular-progress></playground-file-editor>
-        </lit-island>
-      </details>
-      <p><a href="./stories/" target="_blank">Open interactive demo in new tab.</a></p>
+      <div class="kb-playground-accordion-wrap">
+        <details class="kb-playground-details">
+          <summary class="kb-playground-summary">
+            <div class="kb-summary-left">
+              <md-outlined-icon-button toggle tabindex="-1" aria-hidden="true" class="kb-summary-toggle">
+                <md-icon aria-hidden="true">expand_more</md-icon>
+                <md-icon aria-hidden="true" slot="selected">expand_less</md-icon>
+              </md-outlined-icon-button>
+              <div class="kb-summary-text-wrap">
+                <div class="kb-summary-title">
+                  <span>카카오뱅크 실시간 인터랙티브 데모</span>
+                  <span class="kb-playground-badge">KB Playground</span>
+                </div>
+                <span class="kb-summary-desc">다양한 옵션 조합과 코드를 실시간으로 테스트하고 편집해볼 수 있습니다.</span>
+              </div>
+            </div>
+          </summary>
+          <div class="kb-playground-inner">
+            <lit-island on:visible import="/js/hydration-entrypoints/playground-elements.js" class="example" aria-hidden="true">
+              <playground-project
+                  id="${id}" project-src="/assets/stories/${dirname}/project.json">
+              <playground-preview
+                  style="${previewHeight}"
+                  project="${id}"
+              ><md-circular-progress indeterminate></md-circular-progress></playground-preview>
+              <playground-file-editor
+                style="${editorHeight}"
+                project="${id}"
+                filename="stories.ts"
+                line-numbers
+              ><md-circular-progress indeterminate></md-circular-progress></playground-file-editor>
+            </playground-project>
+            </lit-island>
+          </div>
+        </details>
+        <div class="kb-playground-footer">
+          <a href="./stories/" target="_blank" class="kb-newtab-link">
+            새 탭에서 인터랙티브 데모 전체화면으로 열기 ↗
+          </a>
+        </div>
+      </div>
     `;
   });
 }

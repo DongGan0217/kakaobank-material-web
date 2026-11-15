@@ -428,4 +428,144 @@ md-tonal-button [slot="icon"],
   font-size: 18px !important;
 }
 
+/* ============================================================
+   KakaoBank Interactive Demo Inline Accordion & Playground Styling
+   ============================================================ */
+.kb-playground-accordion-wrap {
+  margin: 28px 0;
+  border-radius: 16px;
+  background: var(--md-sys-color-surface, #FFFFFF);
+  border: 1px solid var(--md-sys-color-outline-variant, #E5E8EB);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kb-playground-accordion-wrap:hover {
+  border-color: #D1D6DB;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.kb-playground-details {
+  border-radius: inherit;
+}
+
+.kb-playground-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--md-sys-color-surface, #FFFFFF);
+  cursor: pointer;
+  list-style: none;
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.15s ease;
+  user-select: none;
+}
+
+.kb-playground-summary::-webkit-details-marker {
+  display: none;
+}
+
+.kb-playground-details[open] .kb-playground-summary {
+  border-bottom-color: var(--md-sys-color-outline-variant, #E5E8EB);
+  background: var(--md-sys-color-surface-container-high, #F8F9FA);
+}
+
+.kb-summary-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.kb-summary-toggle {
+  --md-outlined-icon-button-container-shape: 10px;
+  --md-outlined-icon-button-outline-color: var(--md-sys-color-outline-variant, #E5E8EB);
+  color: var(--md-sys-color-on-surface, #191F28);
+}
+
+.kb-summary-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.kb-summary-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--md-sys-color-on-surface, #191F28);
+  letter-spacing: -0.02em;
+}
+
+.kb-summary-desc {
+  font-size: 13px;
+  color: var(--md-sys-color-on-surface-variant, #4E5968);
+  letter-spacing: -0.01em;
+}
+
+.kb-playground-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  background-color: #FFE100;
+  color: #191F28;
+  font-weight: 800;
+  font-size: 11px;
+  border-radius: 6px;
+  letter-spacing: -0.01em;
+}
+
+.kb-playground-inner {
+  padding: 16px;
+  background: var(--md-sys-color-surface, #FFFFFF);
+}
+
+.kb-playground-inner playground-preview {
+  border-radius: 12px;
+  border: 1px solid var(--md-sys-color-outline-variant, #E5E8EB);
+  background: var(--md-sys-color-surface, #FFFFFF);
+  overflow: hidden;
+}
+
+.kb-playground-inner playground-file-editor {
+  border-radius: 12px;
+  border: 1px solid var(--md-sys-color-outline-variant, #E5E8EB);
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.kb-playground-footer {
+  padding: 12px 20px;
+  background: var(--md-sys-color-surface-container-high, #F8F9FA);
+  border-top: 1px solid var(--md-sys-color-outline-variant, #E5E8EB);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.kb-newtab-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--md-sys-color-on-surface, #191F28);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  border: 1px solid var(--md-sys-color-outline-variant, #E5E8EB);
+  transition: all 0.15s ease;
+}
+
+.kb-newtab-link:hover {
+  background: #FFE100;
+  border-color: #FFE100;
+  color: #191F28;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+
 
